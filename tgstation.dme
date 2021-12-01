@@ -4058,5 +4058,6 @@
 #include "interface\stylesheet.dm"
 #include "interface\skin.dmf"
 #include "modular_event\base\no_destruction.dm"
+#include "modular_event\base\no_diseases.dm"
 #include "modular_event\base\station_traits.dm"
 // END_INCLUDE
