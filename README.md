@@ -4,7 +4,16 @@ This repository is a descendant of the "events base". The events base is **modul
 
 ## Adding a new module, where do I do it?
 
+<<<<<<< HEAD
 Modules should be individual features/edits, packed into one.
+=======
+* **Website:** https://www.tgstation13.org
+* **Code:** https://github.com/tgstation/tgstation
+* **Wiki:** https://tgstation13.org/wiki/Main_Page
+* **Codedocs:** https://codedocs.tgstation13.org/
+* **/tg/station Discord:** https://tgstation13.org/phpBB/viewforum.php?f=60
+* **Coderbus Discord:** https://discord.gg/Vh8TJp9
+>>>>>>> upstream/master
 
 `modular_event` houses two folders: one called `base`, and the other named whatever the event is called. `base` should hold anything that **makes sense and/or is likely to reuse in other events**. For example, multiple events want to limit jobs to only assistant and cyborg. Thus, the `limit_jobs` module exists in `base`. However, only the Toolbox Tournament is interested in running tournaments, so the `tournament` module only exists in `modular_event/toolbox_tournament`.
 
