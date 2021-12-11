@@ -583,3 +583,5 @@ URGENT_AHELP_COOLDOWN 300
 ## Based on config directory, so "motd.txt" points to "config/motd.txt"
 MOTD motd.txt
 #MOTD motd_extra.txt
+
+$include event.txt
