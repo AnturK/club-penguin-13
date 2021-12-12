@@ -4069,6 +4069,7 @@
 #include "interface\menu.dm"
 #include "interface\stylesheet.dm"
 #include "interface\skin.dmf"
+#include "modular_event\base\disable_minor_mapping.dm"
 #include "modular_event\base\disable_musician.dm"
 #include "modular_event\base\limit_jobs.dm"
 #include "modular_event\base\no_destruction.dm"
