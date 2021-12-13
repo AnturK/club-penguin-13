@@ -4076,4 +4076,6 @@
 #include "modular_event\base\no_destruction.dm"
 #include "modular_event\base\no_diseases.dm"
 #include "modular_event\base\station_traits.dm"
+#include "modular_event\base\event_aheal\code\action.dm"
+#include "modular_event\base\event_aheal\code\living.dm"
 // END_INCLUDE
