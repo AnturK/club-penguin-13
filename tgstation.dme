@@ -4073,6 +4073,7 @@
 #include "modular_event\base\disable_minor_mapping.dm"
 #include "modular_event\base\disable_musician.dm"
 #include "modular_event\base\force_lag_switch.dm"
+#include "modular_event\base\free_chameleon_kits.dm"
 #include "modular_event\base\limit_jobs.dm"
 #include "modular_event\base\no_destruction.dm"
 #include "modular_event\base\no_diseases.dm"
