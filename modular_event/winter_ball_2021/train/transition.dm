@@ -30,10 +30,10 @@ GLOBAL_VAR(train_origin)
 
 	var/turf/current_turf = get_turf(src)
 
-	current_turf.AddComponent(/datum/component/mirage_border, target, dir, 1)
 	current_turf.AddComponent(/datum/component/turf_transition, target)
 
-// This is needed to prevent you from seeing space if the transition effect is blocked from your view
+// This is needed to prevent you from seeing space if the transition effect is blocked from your view,
+// like it would if we were using the mirage component.
 /obj/effect/landmark/from_train_to_stop_transition/proc/fill_with_more()
 	// + 3 just for some fudge
 	var/range = world.view + 3
@@ -42,9 +42,10 @@ GLOBAL_VAR(train_origin)
 	var/turf/northeast = locate(clamp(x + (dir & EAST ? range : 0), 1, world.maxx), clamp(y + (dir & NORTH ? range : 0), 1, world.maxy), z)
 
 	for(var/turf/turf in block(southwest, northeast))
-		new /obj/effect/landmark/from_train_to_stop_transition(turf, /* create_more = */ FALSE)
+		if (turf != loc)
+			new /obj/effect/landmark/from_train_to_stop_transition(turf, /* create_more = */ FALSE)
 
-/// Should be located at (1, 1) of the train map, marking where the transition turfs will send you
+/// Marks where the transition turfs will send you
 /obj/effect/landmark/transition_train_origin
 	name = "train origin"
 
@@ -54,6 +55,8 @@ GLOBAL_VAR(train_origin)
 
 /// Will perform transitions from one turf to another, blocking the movable if
 /// it cannot make the cross.
+/// Similar to the mirage component, will create an illusion that the object is there,
+/// simulating not only vis_contents, but also opacity.
 /datum/component/turf_transition
 	var/atom/movable/turf_transition_blocker/blocker
 	var/turf/transition_to
@@ -76,7 +79,9 @@ GLOBAL_VAR(train_origin)
 	RegisterSignal(parent, COMSIG_ATOM_ENTERED, .proc/on_atom_entered)
 
 /datum/component/turf_transition/UnregisterFromParent()
-	blocker?.moveToNullspace()
+	if (!isnull(blocker))
+		blocker.moveToNullspace()
+		blocker.vis_contents.Cut()
 	UnregisterSignal(parent, COMSIG_ATOM_ENTERED)
 
 /datum/component/turf_transition/Destroy(force, silent)
@@ -89,19 +94,27 @@ GLOBAL_VAR(train_origin)
 	SIGNAL_HANDLER
 	arrived.forceMove(transition_to)
 
-// A bit of a hack, because there doesn't appear to be a way to cancel pass throughs from a component.
 /atom/movable/turf_transition_blocker
 	anchored = TRUE
-	invisibility = INVISIBILITY_MAXIMUM
+	layer = ABOVE_ALL_MOB_LAYER
+	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
 
 	var/turf/watching
 
 /atom/movable/turf_transition_blocker/Initialize(mapload, watching)
 	. = ..()
+
 	src.watching = watching
+	vis_contents += watching
+
+	RegisterSignal(watching, COMSIG_ATOM_ENTERED, .proc/on_entered)
+	RegisterSignal(watching, COMSIG_ATOM_EXITED, .proc/on_exited)
+
+	update_opacity()
 
 /atom/movable/turf_transition_blocker/Destroy(force)
 	watching = null
+
 	return ..()
 
 /atom/movable/turf_transition_blocker/CanPass(atom/movable/mover, border_dir)
@@ -109,3 +122,24 @@ GLOBAL_VAR(train_origin)
 		return FALSE
 
 	return !watching.is_blocked_turf()
+
+/atom/movable/turf_transition_blocker/proc/update_opacity()
+	if (watching.opacity)
+		set_opacity(TRUE)
+		return
+
+	for (var/atom/movable/content as anything in watching.contents)
+		if (content.opacity)
+			set_opacity(TRUE)
+			return
+
+	set_opacity(FALSE)
+
+/atom/movable/turf_transition_blocker/proc/on_entered(turf/source, atom/movable/arrived)
+	SIGNAL_HANDLER
+	if (arrived.opacity)
+		set_opacity(TRUE)
+
+/atom/movable/turf_transition_blocker/proc/on_exited(turf/source, atom/movable/arrived)
+	SIGNAL_HANDLER
+	update_opacity()

@@ -81,10 +81,6 @@ SUBSYSTEM_DEF(train)
 			landing_position.z,
 		)
 
-		var/obj/effect/abstract/mirage_holder/mirage_holder = new(target)
-		mirage_holder.vis_contents += train_turf
-		train_stop_disposables += mirage_holder
-
 		train_stop_disposables += target.AddComponent(/datum/component/turf_transition, train_turf)
 
 		CHECK_TICK
