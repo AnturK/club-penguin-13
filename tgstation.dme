@@ -4080,4 +4080,7 @@
 #include "modular_event\base\station_traits.dm"
 #include "modular_event\base\event_aheal\code\action.dm"
 #include "modular_event\base\event_aheal\code\living.dm"
+#include "modular_event\winter_ball_2021\train\mapping.dm"
+#include "modular_event\winter_ball_2021\train\stops.dm"
+#include "modular_event\winter_ball_2021\train\transition.dm"
 // END_INCLUDE
