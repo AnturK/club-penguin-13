@@ -1,51 +1,485 @@
-"a" = (/obj/effect/landmark/from_train_to_stop_transition{dir = 8},/turf/open/space/basic,/area/space)
-"b" = (/turf/template_noop,/area/template_noop)
-"f" = (/obj/effect/landmark/from_train_to_stop_transition{dir = 6},/turf/open/space/basic,/area/space)
-"j" = (/obj/effect/landmark/from_train_to_stop_transition{dir = 10},/turf/open/space,/area/space)
-"l" = (/obj/effect/landmark/from_train_to_stop_transition{dir = 1},/turf/open/space/basic,/area/space)
-"p" = (/obj/effect/landmark/from_train_to_stop_transition,/turf/open/space/basic,/area/space)
-"t" = (/obj/machinery/light/directional/west,/turf/open/floor/iron,/area/train)
-"x" = (/obj/effect/landmark/from_train_to_stop_transition{dir = 4},/turf/open/space/basic,/area/space)
-"D" = (/obj/structure/window/reinforced/fulltile,/turf/open/floor/iron,/area/train)
-"F" = (/obj/structure/holosign/barrier/atmos/sturdy,/turf/open/floor/iron,/area/train)
-"I" = (/obj/effect/landmark/transition_train_origin,/turf/template_noop,/area/template_noop)
-"K" = (/obj/machinery/light/directional/east,/turf/open/floor/iron,/area/train)
-"L" = (/turf/closed/wall,/area/train)
-"M" = (/turf/open/floor/iron,/area/train)
-"V" = (/obj/effect/landmark/from_train_to_stop_transition{dir = 9},/turf/open/space,/area/space)
-"Y" = (/obj/effect/landmark/from_train_to_stop_transition{dir = 5},/turf/open/space,/area/space)
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/obj/effect/landmark/from_train_to_stop_transition{
+	dir = 8
+	},
+/turf/open/space/basic,
+/area/space)
+"b" = (
+/turf/template_noop,
+/area/template_noop)
+"f" = (
+/obj/effect/landmark/from_train_to_stop_transition{
+	dir = 6
+	},
+/turf/open/space/basic,
+/area/space)
+"j" = (
+/obj/effect/landmark/from_train_to_stop_transition{
+	dir = 10
+	},
+/turf/open/space,
+/area/space)
+"l" = (
+/obj/effect/landmark/from_train_to_stop_transition{
+	dir = 1
+	},
+/turf/open/space/basic,
+/area/space)
+"p" = (
+/obj/effect/landmark/from_train_to_stop_transition,
+/turf/open/space/basic,
+/area/space)
+"t" = (
+/obj/machinery/light/directional/west,
+/turf/open/floor/iron,
+/area/train)
+"x" = (
+/obj/effect/landmark/from_train_to_stop_transition{
+	dir = 4
+	},
+/turf/open/space/basic,
+/area/space)
+"D" = (
+/obj/structure/window/reinforced/fulltile,
+/turf/open/floor/iron,
+/area/train)
+"F" = (
+/obj/structure/holosign/barrier/atmos/sturdy,
+/turf/open/floor/iron,
+/area/train)
+"I" = (
+/obj/effect/landmark/transition_train_origin,
+/turf/template_noop,
+/area/template_noop)
+"K" = (
+/obj/machinery/light/directional/east,
+/turf/open/floor/iron,
+/area/train)
+"L" = (
+/turf/closed/wall,
+/area/train)
+"M" = (
+/turf/open/floor/iron,
+/area/train)
+"V" = (
+/obj/effect/landmark/from_train_to_stop_transition{
+	dir = 9
+	},
+/turf/open/space,
+/area/space)
+"Y" = (
+/obj/effect/landmark/from_train_to_stop_transition{
+	dir = 5
+	},
+/turf/open/space,
+/area/space)
 
 (1,1,1) = {"
-Ibllllllllbb
-bVDDDDDDDDYb
-aLMMMMMMMMLx
-aDtMMMMMMKDx
-aLtMMMMMMKLx
-aLtMMMMMMKLx
-aDtMMMMMMKDx
-aLtMMMMMMKLx
-aLtMMMMMMKLx
-aDtMMMMMMKDx
-aLtMMMMMMKLx
-aLtMMMMMMKLx
-aDtMMMMMMKDx
-aFMMMMMMMMFx
-aFMMMMMMMMFx
-aDtMMMMMMKDx
-aLtMMMMMMKLx
-aLtMMMMMMKLx
-aDtMMMMMMKDx
-aLtMMMMMMKLx
-aLtMMMMMMKLx
-aDtMMMMMMKDx
-aLtMMMMMMKLx
-aLtMMMMMMKLx
-aDtMMMMMMKDx
-aLtMMMMMMKLx
-aLtMMMMMMKLx
-aDtMMMMMMKDx
-aLtMMMMMMKLx
-aLMMMMMMMMLx
-bjDDDDDDDDfb
-bbppppppppbb
+I
+b
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+b
+b
+"}
+(2,1,1) = {"
+b
+V
+L
+D
+L
+L
+D
+L
+L
+D
+L
+L
+D
+F
+F
+D
+L
+L
+D
+L
+L
+D
+L
+L
+D
+L
+L
+D
+L
+L
+j
+b
+"}
+(3,1,1) = {"
+l
+D
+M
+t
+t
+t
+t
+t
+t
+t
+t
+t
+t
+M
+M
+t
+t
+t
+t
+t
+t
+t
+t
+t
+t
+t
+t
+t
+t
+M
+D
+p
+"}
+(4,1,1) = {"
+l
+D
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+D
+p
+"}
+(5,1,1) = {"
+l
+D
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+D
+p
+"}
+(6,1,1) = {"
+l
+D
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+D
+p
+"}
+(7,1,1) = {"
+l
+D
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+D
+p
+"}
+(8,1,1) = {"
+l
+D
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+D
+p
+"}
+(9,1,1) = {"
+l
+D
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+D
+p
+"}
+(10,1,1) = {"
+l
+D
+M
+K
+K
+K
+K
+K
+K
+K
+K
+K
+K
+M
+M
+K
+K
+K
+K
+K
+K
+K
+K
+K
+K
+K
+K
+K
+K
+M
+D
+p
+"}
+(11,1,1) = {"
+b
+Y
+L
+D
+L
+L
+D
+L
+L
+D
+L
+L
+D
+F
+F
+D
+L
+L
+D
+L
+L
+D
+L
+L
+D
+L
+L
+D
+L
+L
+f
+b
+"}
+(12,1,1) = {"
+b
+b
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+b
+b
 "}
