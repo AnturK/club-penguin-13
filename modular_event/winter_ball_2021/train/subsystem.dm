@@ -113,7 +113,6 @@ SUBSYSTEM_DEF(train)
 
 	INVOKE_ASYNC(src, .proc/update_train_at_stop)
 
-// EVENT TODO: Only clear, don't create, for hyperspace
 /datum/controller/subsystem/train/proc/update_train_at_stop()
 	for (var/disposable in train_stop_disposables)
 		qdel(disposable)
