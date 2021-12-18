@@ -12,13 +12,21 @@ GLOBAL_VAR(train_origin)
 	if (mapload && create_more)
 		fill_with_more()
 
+	RegisterSignal(SStrain, COMSIG_TRAIN_SUBSYSTEM_STOP_CHANGED, .proc/on_stop_changed)
+
 	return INITIALIZE_HINT_LATELOAD
 
 /obj/effect/landmark/from_train_to_stop_transition/LateInitialize()
 	. = ..()
 	update_to_current_stop()
 
+/obj/effect/landmark/from_train_to_stop_transition/proc/on_stop_changed()
+	SIGNAL_HANDLER
+	INVOKE_ASYNC(src, .proc/update_to_current_stop)
+
 /obj/effect/landmark/from_train_to_stop_transition/proc/update_to_current_stop()
+	qdel(loc.GetComponent(/datum/component/turf_transition))
+
 	var/turf/landing_position = SStrain.find_landing_position()
 	if (isnull(landing_position))
 		loc.AddComponent(/datum/component/turf_transition, get_on_the_move_tile())
@@ -101,20 +109,32 @@ GLOBAL_VAR(train_origin)
 	layer = ABOVE_ALL_MOB_LAYER
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
 
+	var/list/opaque_things = list()
 	var/turf/watching
 
-/atom/movable/turf_transition_blocker/Initialize(mapload, watching)
+/atom/movable/turf_transition_blocker/Initialize(mapload, turf/watching)
 	. = ..()
 
 	src.watching = watching
 	vis_contents += watching
 
-	RegisterSignal(watching, COMSIG_ATOM_ENTERED, .proc/on_entered)
-	RegisterSignal(watching, COMSIG_ATOM_EXITED, .proc/on_exited)
+	if (watching.opacity)
+		set_opacity(TRUE)
+	else if (!HAS_TRAIT(watching, TRAIT_IGNORE_OPACITY_CHANGES))
+		// This trait is necessary for on-the-move tiles, otherwise we register a ton
+		// of signals on one tile, causing tons of lag.
+		RegisterSignal(watching, COMSIG_ATOM_ENTERED, .proc/on_entered)
+		RegisterSignal(watching, COMSIG_ATOM_EXITED, .proc/on_exited)
 
-	update_opacity()
+		for (var/atom/movable/content as anything in watching.contents)
+			if (content.opacity)
+				opaque_things += WEAKREF(content)
+
+		if (opaque_things.len)
+			set_opacity(TRUE)
 
 /atom/movable/turf_transition_blocker/Destroy(force)
+	opaque_things = null
 	watching = null
 
 	return ..()
@@ -125,23 +145,16 @@ GLOBAL_VAR(train_origin)
 
 	return !watching.is_blocked_turf()
 
-/atom/movable/turf_transition_blocker/proc/update_opacity()
-	if (watching.opacity)
-		set_opacity(TRUE)
-		return
-
-	for (var/atom/movable/content as anything in watching.contents)
-		if (content.opacity)
-			set_opacity(TRUE)
-			return
-
-	set_opacity(FALSE)
-
 /atom/movable/turf_transition_blocker/proc/on_entered(turf/source, atom/movable/arrived)
 	SIGNAL_HANDLER
+
 	if (arrived.opacity)
+		opaque_things += WEAKREF(arrived)
 		set_opacity(TRUE)
 
 /atom/movable/turf_transition_blocker/proc/on_exited(turf/source, atom/movable/arrived)
 	SIGNAL_HANDLER
-	update_opacity()
+
+	opaque_things -= WEAKREF(arrived)
+	if (opaque_things.len)
+		set_opacity(FALSE)

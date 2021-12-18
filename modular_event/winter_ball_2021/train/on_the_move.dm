@@ -16,11 +16,12 @@ GLOBAL_LIST_EMPTY(falling_off_points)
 	turf.zImpact(arrived, 1, src)
 
 /proc/get_on_the_move_tile()
-	var/static/tile = null
+	var/static/turf/tile = null
 
 	if (isnull(tile))
 		var/datum/turf_reservation/reservation = SSmapping.RequestBlockReservation(1, 1)
 		tile = new /turf/open/floor/holofloor/road(reservation.reserved_turfs[1])
+		ADD_TRAIT(tile, TRAIT_IGNORE_OPACITY_CHANGES, "on_the_move")
 
 	return tile
 

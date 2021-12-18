@@ -1,3 +1,6 @@
+#define TIME_IN_TRANSIT (5 SECONDS)
+#define TIME_PER_STOP (15 SECONDS)
+
 /// The train will be stationed such that its origin will map onto this landmark.
 /obj/effect/landmark/train_landing_position
 	name = "train landing position"
@@ -5,9 +8,7 @@
 SUBSYSTEM_DEF(train)
 	name = "Event - Train"
 	init_order = INIT_ORDER_MAPPING - 1
-
-	// EVENT TODO: Fire every minute or so to cycle the stops
-	flags = SS_NO_FIRE
+	wait = 5 SECONDS
 
 	var/datum/map_template/train_template
 	var/list/datum/space_level/train_stops = list()
@@ -15,10 +16,12 @@ SUBSYSTEM_DEF(train)
 	// EVENT TODO: Make this the hyperspace equivalent
 	var/current_stop
 
+	var/current_stop_index = 0
+	var/time_left_for_stop = 0
+
 	var/list/train_stop_disposables = list()
 
 	var/turf/landing_position
-	var/landing_position_cached = FALSE
 
 /datum/controller/subsystem/train/stat_entry(msg)
 	return ..("[msg] | Stop: [current_stop || "MOVING"]")
@@ -32,6 +35,33 @@ SUBSYSTEM_DEF(train)
 
 	return ..()
 
+/datum/controller/subsystem/train/fire()
+	time_left_for_stop -= wait
+
+	// EVENT TODO: Warn people, maybe over speakers in the area, the train is leaving soon?
+	if (time_left_for_stop > 0)
+		return
+
+	if (isnull(landing_position))
+		// We were in transit, so pick a new stop
+		current_stop_index += 1
+		time_left_for_stop = TIME_PER_STOP
+		current_stop = train_stops[(current_stop_index % train_stops.len) + 1]
+
+		// EVENT TODO: Cool UI effect, sounds, smoke, the whole shebang
+		message_admins("The train is now at [current_stop].")
+	else
+		landing_position = null
+		time_left_for_stop = TIME_IN_TRANSIT
+		current_stop = null
+
+		// EVENT TODO: The same shebang here
+		message_admins("The train is now in transit.")
+
+	SEND_SIGNAL(src, COMSIG_TRAIN_SUBSYSTEM_STOP_CHANGED)
+
+	update_train_at_stop()
+
 /datum/controller/subsystem/train/proc/load_stops()
 	var/stops_dir = "_maps/winter_ball/stops/"
 
@@ -42,7 +72,6 @@ SUBSYSTEM_DEF(train)
 		CHECK_TICK
 
 /datum/controller/subsystem/train/proc/find_landing_position()
-	// EVENT TODO: Make sure whatever sets current_stop sets landing_position to null, so the cache dies
 	if (!isnull(landing_position))
 		return landing_position
 
@@ -95,3 +124,6 @@ SUBSYSTEM_DEF(train)
 
 /datum/map_template/train_stop
 	name = "Train Stop"
+
+#undef TIME_IN_TRANSIT
+#undef TIME_PER_STOP
