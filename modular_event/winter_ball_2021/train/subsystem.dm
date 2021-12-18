@@ -11,6 +11,7 @@
 SUBSYSTEM_DEF(train)
 	name = "Event - Train"
 	init_order = INIT_ORDER_MAPPING - 1
+	runlevels = RUNLEVEL_GAME
 	wait = 1 SECONDS
 
 	var/datum/map_template/train_template
@@ -28,6 +29,8 @@ SUBSYSTEM_DEF(train)
 
 	var/turf/landing_position
 
+	var/first_fire = TRUE
+
 /datum/controller/subsystem/train/stat_entry(msg)
 	return ..("[msg] | Stop: [current_stop || "MOVING"] | Next Stop in [DisplayTimeText(next_stop_cooldown - world.time)]")
 
@@ -41,6 +44,10 @@ SUBSYSTEM_DEF(train)
 	return ..()
 
 /datum/controller/subsystem/train/fire()
+	if (first_fire)
+		first_fire = FALSE
+		COOLDOWN_START(src, next_stop_cooldown, TIME_IN_TRANSIT)
+
 	if (!COOLDOWN_FINISHED(src, next_stop_cooldown))
 		if (isnull(landing_position))
 			warn_for_pulling_up()
