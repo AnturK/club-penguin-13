@@ -1,5 +1,8 @@
-#define TIME_IN_TRANSIT (5 SECONDS)
+#define TIME_BEFORE_PULLING_UP_SOUND (6 SECONDS)
+#define TIME_IN_TRANSIT (10 SECONDS)
 #define TIME_PER_STOP (15 SECONDS)
+
+#define WARN_PULL_UP_SOUND_PLAYED 1
 
 /// The train will be stationed such that its origin will map onto this landmark.
 /obj/effect/landmark/train_landing_position
@@ -8,7 +11,7 @@
 SUBSYSTEM_DEF(train)
 	name = "Event - Train"
 	init_order = INIT_ORDER_MAPPING - 1
-	wait = 5 SECONDS
+	wait = 1 SECONDS
 
 	var/datum/map_template/train_template
 	var/list/datum/space_level/train_stops = list()
@@ -18,6 +21,8 @@ SUBSYSTEM_DEF(train)
 
 	var/current_stop_index = 0
 	COOLDOWN_DECLARE(next_stop_cooldown)
+
+	var/warning_level = 0
 
 	var/list/train_stop_disposables = list()
 
@@ -36,8 +41,12 @@ SUBSYSTEM_DEF(train)
 	return ..()
 
 /datum/controller/subsystem/train/fire()
-	// EVENT TODO: Warn people, maybe over speakers in the area, the train is leaving soon?
 	if (!COOLDOWN_FINISHED(src, next_stop_cooldown))
+		if (isnull(landing_position))
+			warn_for_pulling_up()
+		else
+			warn_for_leaving()
+
 		return
 
 	if (isnull(landing_position))
@@ -57,15 +66,14 @@ SUBSYSTEM_DEF(train)
 		message_admins("The train is now in transit.")
 
 	SEND_SIGNAL(src, COMSIG_TRAIN_SUBSYSTEM_STOP_CHANGED)
+	warning_level = 0
 
 	update_train_at_stop()
 
 /datum/controller/subsystem/train/proc/load_stops()
-	var/stops_dir = "_maps/winter_ball/stops/"
-
-	for (var/stop_file in flist(stops_dir))
-		var/datum/map_template/map_template = new("[stops_dir][stop_file]", "[stop_file]")
-		train_stops[stop_file] = map_template.load_new_z()
+	for (var/datum/map_template/train_stop_template_type as anything in subtypesof(/datum/map_template/train_stop))
+		var/datum/map_template/map_template = new train_stop_template_type
+		train_stops[map_template.name] = map_template.load_new_z()
 
 		CHECK_TICK
 
@@ -123,8 +131,23 @@ SUBSYSTEM_DEF(train)
 
 		CHECK_TICK
 
-/datum/map_template/train_stop
-	name = "Train Stop"
+/datum/controller/subsystem/train/proc/warn_for_pulling_up()
+	if (warning_level == WARN_PULL_UP_SOUND_PLAYED)
+		return
 
+	if (COOLDOWN_TIMELEFT(src, next_stop_cooldown) > TIME_BEFORE_PULLING_UP_SOUND)
+		return
+
+	warning_level = WARN_PULL_UP_SOUND_PLAYED
+
+	for (var/mob/player_mob as anything in GLOB.player_list)
+		if (istype(get_area(player_mob), /area/train))
+			SEND_SOUND(player_mob, 'modular_event/winter_ball_2021/train/sound/train_pulling_up.ogg')
+
+// EVENT TODO: Warn people, maybe over speakers in the area, the train is leaving soon?
+/datum/controller/subsystem/train/proc/warn_for_leaving()
+
+#undef TIME_BEFORE_PULLING_UP_SOUND
 #undef TIME_IN_TRANSIT
 #undef TIME_PER_STOP
+#undef WARN_PULL_UP_SOUND_PLAYED

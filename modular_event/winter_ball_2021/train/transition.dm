@@ -156,5 +156,5 @@ GLOBAL_VAR(train_origin)
 	SIGNAL_HANDLER
 
 	LAZYREMOVE(opaque_things, WEAKREF(arrived))
-	if (!LAZYLEN(opaque_things.len))
+	if (!LAZYLEN(opaque_things))
 		set_opacity(FALSE)
