@@ -92,7 +92,7 @@ GLOBAL_VAR(train_origin)
 
 /datum/component/turf_transition/proc/on_atom_entered(turf/source, atom/movable/arrived)
 	SIGNAL_HANDLER
-	arrived.forceMove(transition_to)
+	arrived.zMove(target = transition_to, z_move_flags = ZMOVE_FLIGHT_FLAGS | ZMOVE_INCLUDE_PULLED)
 
 /atom/movable/turf_transition_blocker
 	anchored = TRUE
