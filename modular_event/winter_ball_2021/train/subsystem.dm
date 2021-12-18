@@ -55,6 +55,8 @@ SUBSYSTEM_DEF(train)
 
 		return
 
+	warning_level = 0
+
 	if (isnull(landing_position))
 		// We were in transit, so pick a new stop
 		current_stop_index += 1
@@ -71,8 +73,6 @@ SUBSYSTEM_DEF(train)
 
 	SEND_SIGNAL(src, COMSIG_TRAIN_SUBSYSTEM_STOP_CHANGED)
 	CHECK_TICK
-
-	warning_level = 0
 
 	update_train_at_stop()
 
