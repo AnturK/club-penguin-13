@@ -3,6 +3,7 @@ GLOBAL_VAR(train_origin)
 /// Represents the transition from the train to the current stop
 /obj/effect/landmark/from_train_to_stop_transition
 	name = "from train to stop transition"
+	layer = HIGH_TURF_LAYER
 	icon = 'icons/obj/device.dmi'
 	icon_state = "pinonfar"
 

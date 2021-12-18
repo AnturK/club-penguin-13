@@ -61,17 +61,17 @@ SUBSYSTEM_DEF(train)
 		COOLDOWN_START(src, next_stop_cooldown, TIME_PER_STOP)
 		current_stop = train_stops[(current_stop_index % train_stops.len) + 1]
 
-		// EVENT TODO: Cool UI effect, sounds, smoke, the whole shebang
+		// EVENT TODO: Cool UI effect
 		message_admins("The train is now at [current_stop].")
 	else
 		landing_position = null
 		COOLDOWN_START(src, next_stop_cooldown, TIME_IN_TRANSIT)
 		current_stop = null
-
-		// EVENT TODO: The same shebang here
 		message_admins("The train is now in transit.")
 
 	SEND_SIGNAL(src, COMSIG_TRAIN_SUBSYSTEM_STOP_CHANGED)
+	CHECK_TICK
+
 	warning_level = 0
 
 	update_train_at_stop()

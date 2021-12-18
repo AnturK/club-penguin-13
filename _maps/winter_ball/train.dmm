@@ -3,6 +3,7 @@
 /obj/effect/landmark/from_train_to_stop_transition{
 	dir = 8
 	},
+/obj/effect/landmark/train_smoke,
 /turf/open/space/basic,
 /area/space)
 "b" = (
@@ -12,22 +13,26 @@
 /obj/effect/landmark/from_train_to_stop_transition{
 	dir = 6
 	},
+/obj/effect/landmark/train_smoke,
 /turf/open/space/basic,
 /area/space)
 "j" = (
 /obj/effect/landmark/from_train_to_stop_transition{
 	dir = 10
 	},
+/obj/effect/landmark/train_smoke,
 /turf/open/space,
 /area/space)
 "l" = (
 /obj/effect/landmark/from_train_to_stop_transition{
 	dir = 1
 	},
+/obj/effect/landmark/train_smoke,
 /turf/open/space/basic,
 /area/space)
 "p" = (
 /obj/effect/landmark/from_train_to_stop_transition,
+/obj/effect/landmark/train_smoke,
 /turf/open/space/basic,
 /area/space)
 "t" = (
@@ -38,6 +43,7 @@
 /obj/effect/landmark/from_train_to_stop_transition{
 	dir = 4
 	},
+/obj/effect/landmark/train_smoke,
 /turf/open/space/basic,
 /area/space)
 "D" = (
@@ -66,12 +72,14 @@
 /obj/effect/landmark/from_train_to_stop_transition{
 	dir = 9
 	},
+/obj/effect/landmark/train_smoke,
 /turf/open/space,
 /area/space)
 "Y" = (
 /obj/effect/landmark/from_train_to_stop_transition{
 	dir = 5
 	},
+/obj/effect/landmark/train_smoke,
 /turf/open/space,
 /area/space)
 
