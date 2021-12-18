@@ -109,7 +109,7 @@ GLOBAL_VAR(train_origin)
 	layer = ABOVE_ALL_MOB_LAYER
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
 
-	var/list/opaque_things = list()
+	var/list/opaque_things
 	var/turf/watching
 
 /atom/movable/turf_transition_blocker/Initialize(mapload, turf/watching)
@@ -128,9 +128,9 @@ GLOBAL_VAR(train_origin)
 
 		for (var/atom/movable/content as anything in watching.contents)
 			if (content.opacity)
-				opaque_things += WEAKREF(content)
+				LAZYADD(opaque_things, WEAKREF(content))
 
-		if (opaque_things.len)
+		if (LAZYLEN(opaque_things))
 			set_opacity(TRUE)
 
 /atom/movable/turf_transition_blocker/Destroy(force)
@@ -149,12 +149,12 @@ GLOBAL_VAR(train_origin)
 	SIGNAL_HANDLER
 
 	if (arrived.opacity)
-		opaque_things += WEAKREF(arrived)
+		LAZYADD(opaque_things, WEAKREF(arrived))
 		set_opacity(TRUE)
 
 /atom/movable/turf_transition_blocker/proc/on_exited(turf/source, atom/movable/arrived)
 	SIGNAL_HANDLER
 
-	opaque_things -= WEAKREF(arrived)
-	if (opaque_things.len)
+	LAZYREMOVE(opaque_things, WEAKREF(arrived))
+	if (!LAZYLEN(opaque_things.len))
 		set_opacity(FALSE)
