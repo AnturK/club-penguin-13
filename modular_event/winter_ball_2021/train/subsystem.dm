@@ -17,14 +17,14 @@ SUBSYSTEM_DEF(train)
 	var/current_stop
 
 	var/current_stop_index = 0
-	var/time_left_for_stop = 0
+	COOLDOWN_DECLARE(next_stop_cooldown)
 
 	var/list/train_stop_disposables = list()
 
 	var/turf/landing_position
 
 /datum/controller/subsystem/train/stat_entry(msg)
-	return ..("[msg] | Stop: [current_stop || "MOVING"]")
+	return ..("[msg] | Stop: [current_stop || "MOVING"] | Next Stop in [DisplayTimeText(next_stop_cooldown - world.time)]")
 
 /datum/controller/subsystem/train/Initialize(start_timeofday)
 	load_stops()
@@ -36,23 +36,21 @@ SUBSYSTEM_DEF(train)
 	return ..()
 
 /datum/controller/subsystem/train/fire()
-	time_left_for_stop -= wait
-
 	// EVENT TODO: Warn people, maybe over speakers in the area, the train is leaving soon?
-	if (time_left_for_stop > 0)
+	if (!COOLDOWN_FINISHED(src, next_stop_cooldown))
 		return
 
 	if (isnull(landing_position))
 		// We were in transit, so pick a new stop
 		current_stop_index += 1
-		time_left_for_stop = TIME_PER_STOP
+		COOLDOWN_START(src, next_stop_cooldown, TIME_PER_STOP)
 		current_stop = train_stops[(current_stop_index % train_stops.len) + 1]
 
 		// EVENT TODO: Cool UI effect, sounds, smoke, the whole shebang
 		message_admins("The train is now at [current_stop].")
 	else
 		landing_position = null
-		time_left_for_stop = TIME_IN_TRANSIT
+		COOLDOWN_START(src, next_stop_cooldown, TIME_IN_TRANSIT)
 		current_stop = null
 
 		// EVENT TODO: The same shebang here
@@ -102,8 +100,11 @@ SUBSYSTEM_DEF(train)
 
 // EVENT TODO: Only clear, don't create, for hyperspace
 /datum/controller/subsystem/train/proc/update_train_at_stop()
-	QDEL_LIST(train_stop_disposables)
-	CHECK_TICK
+	for (var/disposable in train_stop_disposables)
+		qdel(disposable)
+		CHECK_TICK
+
+	train_stop_disposables.Cut()
 
 	var/obj/landing_position = find_landing_position()
 	if (isnull(landing_position))
