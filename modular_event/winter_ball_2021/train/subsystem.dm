@@ -17,7 +17,6 @@ SUBSYSTEM_DEF(train)
 	var/datum/map_template/train_template
 	var/list/datum/space_level/train_stops = list()
 
-	// EVENT TODO: Make this the hyperspace equivalent
 	var/current_stop
 
 	var/current_stop_index = 0
