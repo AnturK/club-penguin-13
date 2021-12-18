@@ -4081,6 +4081,7 @@
 #include "modular_event\base\event_aheal\code\action.dm"
 #include "modular_event\base\event_aheal\code\living.dm"
 #include "modular_event\winter_ball_2021\train\mapping.dm"
-#include "modular_event\winter_ball_2021\train\stops.dm"
+#include "modular_event\winter_ball_2021\train\on_the_move.dm"
+#include "modular_event\winter_ball_2021\train\subsystem.dm"
 #include "modular_event\winter_ball_2021\train\transition.dm"
 // END_INCLUDE

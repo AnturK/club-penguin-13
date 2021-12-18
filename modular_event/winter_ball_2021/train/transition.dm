@@ -20,6 +20,10 @@ GLOBAL_VAR(train_origin)
 
 /obj/effect/landmark/from_train_to_stop_transition/proc/update_to_current_stop()
 	var/turf/landing_position = SStrain.find_landing_position()
+	if (isnull(landing_position))
+		loc.AddComponent(/datum/component/turf_transition, get_on_the_move_tile())
+		return
+
 	var/turf/train_origin = GLOB.train_origin
 
 	var/turf/target = locate(
@@ -28,9 +32,7 @@ GLOBAL_VAR(train_origin)
 		landing_position.z,
 	)
 
-	var/turf/current_turf = get_turf(src)
-
-	current_turf.AddComponent(/datum/component/turf_transition, target)
+	loc.AddComponent(/datum/component/turf_transition, target)
 
 // This is needed to prevent you from seeing space if the transition effect is blocked from your view,
 // like it would if we were using the mirage component.

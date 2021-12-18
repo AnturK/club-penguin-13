@@ -18,12 +18,14 @@ SUBSYSTEM_DEF(train)
 	var/list/train_stop_disposables = list()
 
 	var/turf/landing_position
+	var/landing_position_cached = FALSE
 
 /datum/controller/subsystem/train/stat_entry(msg)
-	return ..("[msg] | Stop: [current_stop]")
+	return ..("[msg] | Stop: [current_stop || "MOVING"]")
 
 /datum/controller/subsystem/train/Initialize(start_timeofday)
 	load_stops()
+	load_falling_off_point()
 	load_train()
 
 	RegisterSignal(SSatoms, COMSIG_SUBSYSTEM_POST_INITIALIZE, .proc/on_post_atoms_init)
@@ -37,15 +39,15 @@ SUBSYSTEM_DEF(train)
 		var/datum/map_template/map_template = new("[stops_dir][stop_file]", "[stop_file]")
 		train_stops[stop_file] = map_template.load_new_z()
 
-		// EVENT TODO: Remove this, default to hyperspace, load it especially (not in the stops folder)
-		current_stop = stop_file
-
 		CHECK_TICK
 
 /datum/controller/subsystem/train/proc/find_landing_position()
 	// EVENT TODO: Make sure whatever sets current_stop sets landing_position to null, so the cache dies
 	if (!isnull(landing_position))
 		return landing_position
+
+	if (isnull(current_stop))
+		return null
 
 	var/current_stop_z = train_stops[current_stop].z_value
 
@@ -60,6 +62,10 @@ SUBSYSTEM_DEF(train)
 	train_template = new("_maps/winter_ball/train.dmm", "Train")
 	train_template.load_new_z()
 
+/datum/controller/subsystem/train/proc/load_falling_off_point()
+	var/datum/map_template/falling_off_map = new("_maps/winter_ball/fell_off.dmm", "Falling Off Point")
+	falling_off_map.load_new_z()
+
 /datum/controller/subsystem/train/proc/on_post_atoms_init()
 	SIGNAL_HANDLER
 
@@ -71,6 +77,8 @@ SUBSYSTEM_DEF(train)
 	CHECK_TICK
 
 	var/obj/landing_position = find_landing_position()
+	if (isnull(landing_position))
+		return
 
 	var/turf/train_origin = GLOB.train_origin
 
