@@ -99,6 +99,9 @@ SUBSYSTEM_DEF(train)
 
 	CRASH("No valid landing position was found, is this being called before atoms SS?")
 
+/datum/controller/subsystem/train/proc/is_moving()
+	return isnull(current_stop)
+
 /datum/controller/subsystem/train/proc/load_train()
 	train_template = new("_maps/winter_ball/train.dmm", "Train")
 	train_template.load_new_z()
