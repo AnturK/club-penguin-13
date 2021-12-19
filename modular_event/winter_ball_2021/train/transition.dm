@@ -84,6 +84,12 @@ GLOBAL_VAR(train_origin)
 	src.transition_to = transition_to
 	blocker = new(parent, transition_to)
 
+/datum/component/turf_transition/RegisterWithParent()
+	RegisterSignal(parent, COMSIG_ATOM_ENTERED, .proc/on_atom_entered)
+
+/datum/component/turf_transition/UnregisterFromParent()
+	UnregisterSignal(parent, COMSIG_ATOM_ENTERED)
+
 /datum/component/turf_transition/Destroy(force, silent)
 	QDEL_NULL(blocker)
 	transition_to = null
