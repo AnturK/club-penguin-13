@@ -93,9 +93,11 @@ GLOBAL_VAR(train_origin)
 /datum/component/turf_transition/InheritComponent(
 	original_component,
 	i_am_original,
-	transition_to
+	transition_to,
 )
 	qdel(blocker)
+
+	src.transition_to = transition_to
 	blocker = new(parent, transition_to)
 
 /datum/component/turf_transition/proc/on_atom_entered(turf/source, atom/movable/arrived)
