@@ -26,8 +26,6 @@ GLOBAL_VAR(train_origin)
 	INVOKE_ASYNC(src, .proc/update_to_current_stop)
 
 /obj/effect/landmark/from_train_to_stop_transition/proc/update_to_current_stop()
-	qdel(loc.GetComponent(/datum/component/turf_transition))
-
 	var/turf/landing_position = SStrain.find_landing_position()
 	if (isnull(landing_position))
 		loc.AddComponent(/datum/component/turf_transition, get_on_the_move_tile())
@@ -69,6 +67,7 @@ GLOBAL_VAR(train_origin)
 /// Similar to the mirage component, will create an illusion that the object is there,
 /// simulating not only vis_contents, but also opacity.
 /datum/component/turf_transition
+	dupe_mode = COMPONENT_DUPE_UNIQUE_PASSARGS
 	var/atom/movable/turf_transition_blocker/blocker
 	var/turf/transition_to
 
@@ -83,23 +82,21 @@ GLOBAL_VAR(train_origin)
 		return COMPONENT_INCOMPATIBLE
 
 	src.transition_to = transition_to
-	blocker = new(null, transition_to)
-
-/datum/component/turf_transition/RegisterWithParent()
-	blocker.forceMove(parent)
-	RegisterSignal(parent, COMSIG_ATOM_ENTERED, .proc/on_atom_entered)
-
-/datum/component/turf_transition/UnregisterFromParent()
-	if (!isnull(blocker))
-		blocker.moveToNullspace()
-		blocker.vis_contents.Cut()
-	UnregisterSignal(parent, COMSIG_ATOM_ENTERED)
+	blocker = new(parent, transition_to)
 
 /datum/component/turf_transition/Destroy(force, silent)
 	QDEL_NULL(blocker)
 	transition_to = null
 
 	return ..()
+
+/datum/component/turf_transition/InheritComponent(
+	original_component,
+	i_am_original,
+	transition_to
+)
+	qdel(blocker)
+	blocker = new(parent, transition_to)
 
 /datum/component/turf_transition/proc/on_atom_entered(turf/source, atom/movable/arrived)
 	SIGNAL_HANDLER
