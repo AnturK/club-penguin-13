@@ -128,14 +128,73 @@ SUBSYSTEM_DEF(train)
 
 	var/turf/train_origin = GLOB.train_origin
 
+	var/half_width = round(train_template.width / 2)
+	var/half_height = round(train_template.height / 2)
+
+	var/west_edge = landing_position.x - 1
+	var/north_edge = landing_position.y - 1
+
+	var/east_edge = landing_position.x + train_template.width + 1
+	var/south_edge = landing_position.y + train_template.height + 1
+
 	for (var/turf/train_turf in GLOB.areas_by_type[/area/train])
+		var/offset_x = train_turf.x - train_origin.x
+		var/offset_y = train_turf.y - train_origin.y
+
 		var/turf/target = locate(
-			landing_position.x + (train_turf.x - train_origin.x),
-			landing_position.y + (train_turf.y - train_origin.y),
+			landing_position.x + offset_x,
+			landing_position.y + offset_y,
 			landing_position.z,
 		)
 
 		train_stop_disposables += target.AddComponent(/datum/component/turf_transition, train_turf)
+
+		for (var/atom/movable/on_train_turf as anything in target)
+			if (!isobj(on_train_turf) && !isliving(on_train_turf))
+				continue
+
+			if (iseffect(on_train_turf))
+				continue
+
+			// Find the shortest path to *somewhere*
+			var/turf/new_position
+
+			var/x_distance = offset_x - half_width
+			var/y_distance = offset_y - half_height
+
+			// We're closer to the horizontal edge than we are to the vertical edge
+			if (abs(x_distance) < abs(y_distance))
+				new_position = locate(
+					x_distance < 0 ? west_edge : east_edge,
+					target.y,
+					target.z,
+				)
+			else
+				new_position = locate(
+					target.x,
+					y_distance < 0 ? north_edge : south_edge,
+					target.z,
+				)
+
+			// Don't do a real throw, otherwise it could fail
+			on_train_turf.forceMove(new_position)
+
+			on_train_turf.SpinAnimation(loops = 1)
+
+			if (isliving(on_train_turf))
+				var/mob/living/living_victim = on_train_turf
+
+				living_victim.Paralyze(5 SECONDS)
+
+				// How much damage we do here doesn't actually matter since you can full heal anyway, just make it feel impactful
+				living_victim.apply_damage(25, wound_bonus = 20)
+				living_victim.visible_message(
+					span_boldnotice("[living_victim] is crushed by the train!"),
+					span_boldnotice("You are crushed by the train!"),
+				)
+
+				if (iscarbon(on_train_turf))
+					on_train_turf.AddElement(/datum/element/squish, 10 SECONDS)
 
 		CHECK_TICK
 
@@ -154,6 +213,7 @@ SUBSYSTEM_DEF(train)
 
 // EVENT TODO: Warn people, maybe over speakers in the area, the train is leaving soon?
 /datum/controller/subsystem/train/proc/warn_for_leaving()
+	return
 
 #undef TIME_BEFORE_PULLING_UP_SOUND
 #undef TIME_IN_TRANSIT

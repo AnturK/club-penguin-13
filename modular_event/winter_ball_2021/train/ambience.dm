@@ -42,6 +42,6 @@
 	. = ..()
 
 	var/datum/looping_sound/looping_sound = looping_sounds[gone]
-	if (isnull(looping_sound))
+	if (!isnull(looping_sound))
 		qdel(looping_sound)
 		looping_sounds -= gone
