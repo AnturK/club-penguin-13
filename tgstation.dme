@@ -4085,6 +4085,7 @@
 #include "modular_event\winter_ball_2021\train\ambience.dm"
 #include "modular_event\winter_ball_2021\train\mapping.dm"
 #include "modular_event\winter_ball_2021\train\on_the_move.dm"
+#include "modular_event\winter_ball_2021\train\return_to_train.dm"
 #include "modular_event\winter_ball_2021\train\smoke_effect.dm"
 #include "modular_event\winter_ball_2021\train\stops.dm"
 #include "modular_event\winter_ball_2021\train\subsystem.dm"
