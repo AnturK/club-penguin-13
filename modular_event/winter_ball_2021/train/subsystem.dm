@@ -103,7 +103,7 @@ SUBSYSTEM_DEF(train)
 	return isnull(current_stop)
 
 /datum/controller/subsystem/train/proc/load_train()
-	train_template = new("_maps/winter_ball/train.dmm", "Train")
+	train_template = new("_maps/winter_ball/train3.dmm", "Train")
 	train_template.load_new_z()
 
 /datum/controller/subsystem/train/proc/load_falling_off_point()

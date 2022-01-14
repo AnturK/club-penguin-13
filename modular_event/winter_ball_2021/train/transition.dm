@@ -33,11 +33,17 @@ GLOBAL_VAR(train_origin)
 
 	var/turf/train_origin = GLOB.train_origin
 
+	var/target_x = landing_position.x + (x - train_origin.x)
+	var/target_y = landing_position.y + (y - train_origin.y)
+
 	var/turf/target = locate(
-		landing_position.x + (x - train_origin.x),
-		landing_position.y + (y - train_origin.y),
+		target_x,
+		target_y,
 		landing_position.z,
 	)
+
+	if (!isturf(target))
+		CRASH("Couldn't find a tile to map transitions to: (([landing_position.x], [landing_position.y]) -> ([target_x], [target_y]))")
 
 	loc.AddComponent(/datum/component/turf_transition, target)
 
@@ -101,6 +107,9 @@ GLOBAL_VAR(train_origin)
 	i_am_original,
 	transition_to,
 )
+	if (!isturf(transition_to))
+		CRASH("transition_to is not a turf! [transition_to]")
+
 	qdel(blocker)
 
 	src.transition_to = transition_to

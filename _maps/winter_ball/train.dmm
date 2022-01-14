@@ -1,493 +1,222 @@
-//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
-"a" = (
-/obj/effect/landmark/from_train_to_stop_transition{
-	dir = 8
-	},
-/obj/effect/landmark/train_smoke,
-/turf/open/space/basic,
-/area/space)
-"b" = (
-/turf/template_noop,
-/area/template_noop)
-"f" = (
-/obj/effect/landmark/from_train_to_stop_transition{
-	dir = 6
-	},
-/obj/effect/landmark/train_smoke,
-/turf/open/space/basic,
-/area/space)
-"j" = (
-/obj/effect/landmark/from_train_to_stop_transition{
-	dir = 10
-	},
-/obj/effect/landmark/train_smoke,
-/turf/open/space,
-/area/space)
-"l" = (
-/obj/effect/landmark/from_train_to_stop_transition{
-	dir = 1
-	},
-/obj/effect/landmark/train_smoke,
-/turf/open/space/basic,
-/area/space)
-"p" = (
-/obj/effect/landmark/from_train_to_stop_transition,
-/obj/effect/landmark/train_smoke,
-/turf/open/space/basic,
-/area/space)
-"t" = (
-/obj/machinery/light/directional/west,
-/turf/open/floor/iron,
-/area/train)
-"x" = (
-/obj/effect/landmark/from_train_to_stop_transition{
-	dir = 4
-	},
-/obj/effect/landmark/train_smoke,
-/turf/open/space/basic,
-/area/space)
-"D" = (
-/obj/structure/window/reinforced/fulltile,
-/turf/open/floor/iron,
-/area/train)
-"F" = (
-/obj/structure/fans/tiny,
-/turf/open/floor/iron,
-/area/train)
-"I" = (
-/obj/effect/landmark/transition_train_origin,
-/turf/template_noop,
-/area/template_noop)
-"K" = (
-/obj/machinery/light/directional/east,
-/turf/open/floor/iron,
-/area/train)
-"L" = (
-/turf/closed/wall,
-/area/train)
-"M" = (
-/turf/open/floor/iron,
-/area/train)
-"V" = (
-/obj/effect/landmark/from_train_to_stop_transition{
-	dir = 9
-	},
-/obj/effect/landmark/train_smoke,
-/turf/open/space,
-/area/space)
-"Y" = (
-/obj/effect/landmark/from_train_to_stop_transition{
-	dir = 5
-	},
-/obj/effect/landmark/train_smoke,
-/turf/open/space,
-/area/space)
+"ap" = (/obj/structure/mopbucket,/obj/item/mop,/turf/open/floor/wood,/area/train)
+"av" = (/turf/closed/indestructible/fakedoor{name = "Engine Access"},/area/train)
+"ax" = (/obj/effect/landmark/from_train_to_stop_transition{dir = 1},/obj/effect/landmark/train_smoke,/turf/open/space/basic,/area/space)
+"cl" = (/obj/effect/turf_decal/siding/white{dir = 6},/turf/open/floor/iron/dark,/area/train)
+"cW" = (/obj/structure/table/wood,/obj/item/reagent_containers/food/drinks/bottle/absinthe{pixel_x = -7; pixel_y = 13},/obj/item/reagent_containers/food/drinks/bottle/amaretto{pixel_x = 8; pixel_y = 17},/obj/item/reagent_containers/food/drinks/bottle/bitters{pixel_x = -6; pixel_y = 4},/obj/item/reagent_containers/food/drinks/bottle/cognac{pixel_x = 5; pixel_y = 8},/obj/item/reagent_containers/food/drinks/bottle/whiskey{pixel_x = 7; pixel_y = 4},/turf/open/floor/wood/parquet,/area/train)
+"da" = (/obj/structure/sign/directions/command{desc = "A sign, clearly indicating the room number of the room you're currently looking at."; icon_state = "roomnum"; name = "room sign"; pixel_y = 25},/obj/effect/turf_decal/siding/wood{dir = 1},/turf/open/floor/carpet/royalblue,/area/train)
+"df" = (/obj/effect/turf_decal/siding/wood{dir = 9},/turf/open/floor/carpet/red,/area/train)
+"dy" = (/obj/effect/turf_decal/siding/wood{dir = 8},/turf/open/floor/wood,/area/train)
+"dG" = (/obj/effect/turf_decal/siding/wood/corner{dir = 8},/turf/open/floor/carpet/green,/area/train)
+"ee" = (/obj/structure/table/wood,/turf/open/floor/wood/parquet,/area/train)
+"em" = (/obj/structure/curtain/cloth/fancy/mechanical{id = "6/4"},/turf/closed/indestructible/opsglass,/area/train)
+"ew" = (/obj/structure/chair/sofa/left{dir = 8},/turf/open/floor/wood/parquet,/area/train)
+"eN" = (/obj/effect/turf_decal/tile/neutral{dir = 1},/obj/effect/turf_decal/tile/neutral,/obj/effect/turf_decal/tile/neutral{dir = 4},/obj/effect/turf_decal/tile/neutral{dir = 8},/obj/structure/closet/secure_closet/freezer/meat,/turf/open/floor/iron/dark/textured,/area/train)
+"fd" = (/turf/open/floor/iron,/area/train)
+"ff" = (/obj/structure/table/wood/fancy/blue,/obj/item/reagent_containers/food/condiment/saltshaker{pixel_x = -4; pixel_y = 1},/obj/item/reagent_containers/food/condiment/peppermill{pixel_x = 4; pixel_y = 1},/turf/open/floor/wood/parquet,/area/train)
+"fx" = (/obj/structure/table/wood,/obj/item/reagent_containers/food/drinks/bottle/curacao{pixel_x = -11; pixel_y = 12},/obj/item/reagent_containers/food/drinks/bottle/fernet{pixel_x = -3; pixel_y = 7},/obj/item/reagent_containers/food/drinks/bottle/gin{pixel_x = -13; pixel_y = 5},/obj/item/reagent_containers/food/drinks/bottle/goldschlager{pixel_x = 9; pixel_y = 15},/obj/item/reagent_containers/food/drinks/bottle/grenadine{pixel_x = 6; pixel_y = 4},/turf/open/floor/wood/parquet,/area/train)
+"fy" = (/obj/structure/table/reinforced,/obj/item/reagent_containers/spray/cleaner,/turf/open/floor/wood,/area/train)
+"fF" = (/obj/machinery/door/airlock/wood/glass{name = "Room 4/1"},/turf/open/floor/wood/tile,/area/train)
+"fQ" = (/obj/structure/table/reinforced,/obj/structure/bedsheetbin,/turf/open/floor/wood,/area/train)
+"gi" = (/obj/effect/turf_decal/siding/wood/corner{dir = 1},/turf/open/floor/carpet/royalblue,/area/train)
+"gl" = (/obj/effect/turf_decal/siding/white{dir = 4},/turf/open/floor/iron/dark,/area/train)
+"gL" = (/obj/effect/turf_decal/siding/wood{dir = 6},/turf/open/floor/carpet/red,/area/train)
+"hm" = (/obj/effect/turf_decal/siding/wood{dir = 5},/turf/open/floor/carpet/royalblack,/area/train)
+"hr" = (/turf/open/floor/carpet/royalblack,/area/train)
+"hs" = (/obj/effect/turf_decal/tile/dark{dir = 1},/obj/effect/turf_decal/tile/dark,/obj/effect/turf_decal/siding/thinplating/dark{dir = 9},/turf/open/floor/iron/freezer,/area/train)
+"hw" = (/obj/structure/sign/directions/command{desc = "A sign, clearly indicating the room number of the room you're currently looking at."; dir = 4; icon_state = "roomnum"; name = "room sign"; pixel_y = 25},/obj/effect/turf_decal/siding/wood{dir = 1},/turf/open/floor/carpet/green,/area/train)
+"hC" = (/obj/machinery/door/airlock/wood/glass{name = "Room 2/2"},/turf/open/floor/wood/tile,/area/train)
+"hK" = (/obj/structure/curtain/cloth/fancy/mechanical{id = "6/2"},/turf/closed/indestructible/opsglass,/area/train)
+"hQ" = (/obj/effect/turf_decal/siding/wood{dir = 1},/turf/open/floor/carpet/royalblue,/area/train)
+"hV" = (/obj/structure/sign/directions/command{desc = "A sign, clearly indicating the room number of the room you're currently looking at."; dir = 1; icon_state = "roomnum"; name = "room sign"; pixel_y = 25},/obj/effect/turf_decal/siding/wood{dir = 1},/turf/open/floor/carpet/royalblue,/area/train)
+"ic" = (/obj/structure/chair/sofa/corner,/turf/open/floor/wood/parquet,/area/train)
+"iw" = (/obj/structure/table/reinforced,/obj/effect/turf_decal/tile/neutral{dir = 1},/obj/effect/turf_decal/tile/neutral,/obj/effect/turf_decal/tile/neutral{dir = 4},/obj/effect/turf_decal/tile/neutral{dir = 8},/obj/machinery/reagentgrinder{pixel_y = 4},/turf/open/floor/iron/dark/textured,/area/train)
+"iQ" = (/obj/structure/railing,/obj/effect/landmark/from_train_to_stop_transition{dir = 9},/obj/effect/landmark/train_smoke,/turf/open/space/basic,/area/space)
+"iT" = (/obj/structure/curtain/cloth/fancy/mechanical{id = "6/3"},/turf/closed/indestructible/opsglass,/area/train)
+"jg" = (/obj/effect/turf_decal/siding/wood{dir = 4},/turf/open/floor/carpet/green,/area/train)
+"jk" = (/obj/effect/landmark/from_train_to_stop_transition{dir = 5},/obj/effect/landmark/train_smoke,/turf/open/space/basic,/area/train)
+"jm" = (/obj/structure/sign/directions/command{desc = "A sign, clearly indicating the room number of the room you're currently looking at."; icon_state = "roomnum"; name = "room sign"; pixel_y = 25},/obj/effect/turf_decal/siding/wood{dir = 1},/turf/open/floor/carpet/green,/area/train)
+"jy" = (/obj/effect/turf_decal/tile/dark{dir = 1},/obj/effect/turf_decal/tile/dark,/obj/effect/turf_decal/siding/thinplating/dark/corner{dir = 1},/turf/open/floor/iron/freezer,/area/train)
+"jz" = (/obj/effect/turf_decal/siding/wood{dir = 6},/turf/open/floor/carpet/green,/area/train)
+"kN" = (/obj/structure/chair/sofa{dir = 4},/obj/effect/turf_decal/siding/wood{dir = 4},/turf/open/floor/wood/tile,/area/train)
+"la" = (/obj/effect/turf_decal/tile/neutral{dir = 1},/obj/effect/turf_decal/tile/neutral,/obj/effect/turf_decal/tile/neutral{dir = 4},/obj/effect/turf_decal/tile/neutral{dir = 8},/obj/machinery/chem_master/condimaster{name = "CondiMaster Neo"},/turf/open/floor/iron/dark/textured,/area/train)
+"lc" = (/obj/structure/table/wood,/obj/effect/turf_decal/siding/wood{dir = 1},/turf/open/floor/carpet/royalblue,/area/train)
+"lk" = (/turf/open/floor/iron/stairs/old,/area/train)
+"lt" = (/obj/structure/rack,/obj/item/storage/briefcase{name = "suitcase"},/turf/open/floor/wood,/area/train)
+"lF" = (/obj/effect/landmark/from_train_to_stop_transition{dir = 4},/obj/effect/landmark/train_smoke,/turf/open/space/basic,/area/space)
+"mq" = (/obj/structure/falsewall/titanium,/turf/open/space/basic,/area/train)
+"mu" = (/obj/effect/turf_decal/siding/wood{dir = 5},/turf/open/floor/carpet/green,/area/train)
+"mE" = (/obj/structure/curtain/cloth/fancy/mechanical{id = "6/1"},/turf/closed/indestructible/opsglass,/area/train)
+"mT" = (/obj/effect/turf_decal/siding/wood{dir = 6},/turf/open/floor/carpet/royalblack,/area/train)
+"mW" = (/obj/structure/table/wood,/obj/machinery/chem_dispenser/drinks/beer/fullupgrade,/turf/open/floor/wood/parquet,/area/train)
+"nh" = (/obj/effect/turf_decal/tile/dark{dir = 1},/obj/effect/turf_decal/tile/dark,/obj/effect/turf_decal/siding/thinplating/dark/corner{dir = 8},/turf/open/floor/iron/freezer,/area/train)
+"nw" = (/obj/structure/chair/sofa{dir = 8},/obj/item/storage/briefcase{name = "suitcase"},/obj/effect/turf_decal/siding/wood{dir = 8},/turf/open/floor/wood/tile,/area/train)
+"nL" = (/obj/effect/turf_decal/siding/wood{dir = 4},/turf/open/floor/carpet/royalblack,/area/train)
+"nR" = (/obj/structure/chair/sofa/corner{dir = 4},/obj/structure/railing{dir = 8},/turf/open/floor/wood/parquet,/area/train)
+"od" = (/obj/effect/turf_decal/tile/neutral{dir = 1},/obj/effect/turf_decal/tile/neutral,/obj/effect/turf_decal/tile/neutral{dir = 4},/obj/effect/turf_decal/tile/neutral{dir = 8},/obj/structure/table/reinforced,/obj/item/plate/oven_tray,/obj/item/plate/oven_tray{pixel_y = 2},/obj/item/plate/oven_tray{pixel_y = 4},/obj/item/plate/oven_tray{pixel_y = 6},/obj/item/plate/oven_tray{pixel_y = 8},/turf/open/floor/iron/dark/textured,/area/train)
+"oe" = (/obj/structure/table/wood,/obj/effect/turf_decal/siding/wood{dir = 1},/turf/open/floor/carpet/red,/area/train)
+"ok" = (/obj/structure/chair/sofa/right{dir = 4},/turf/open/floor/wood/parquet,/area/train)
+"ol" = (/obj/structure/fans/tiny,/obj/machinery/door/airlock/glass_large{name = "Carriage 4"},/turf/open/floor/wood,/area/train)
+"ox" = (/obj/structure/curtain/cloth/fancy/mechanical{id = "4/4"},/turf/closed/indestructible/opsglass,/area/train)
+"pf" = (/obj/item/kirbyplants{icon_state = "plant-17"},/turf/open/floor/wood/parquet,/area/train)
+"pS" = (/obj/structure/chair/comfy/brown{dir = 4},/turf/open/floor/wood/parquet,/area/train)
+"qz" = (/obj/effect/turf_decal/siding/wood{dir = 9},/turf/open/floor/wood,/area/train)
+"qR" = (/obj/effect/turf_decal/tile/neutral{dir = 1},/obj/effect/turf_decal/tile/neutral,/obj/effect/turf_decal/tile/neutral{dir = 4},/obj/effect/turf_decal/tile/neutral{dir = 8},/obj/machinery/processor,/turf/open/floor/iron/dark/textured,/area/train)
+"rc" = (/obj/structure/chair/stool/directional/west,/turf/open/floor/iron/dark,/area/train)
+"re" = (/obj/effect/turf_decal/siding/wood{dir = 8},/turf/open/floor/carpet/green,/area/train)
+"rp" = (/obj/structure/chair/sofa,/turf/open/floor/wood/parquet,/area/train)
+"rx" = (/obj/structure/curtain/cloth/fancy/mechanical{id = "4/1"},/turf/closed/indestructible/opsglass,/area/train)
+"rJ" = (/obj/structure/table/wood,/obj/item/reagent_containers/food/drinks/bottle/navy_rum{pixel_x = -2; pixel_y = 15},/obj/item/reagent_containers/food/drinks/bottle/maltliquor{pixel_x = -10; pixel_y = 11},/obj/item/reagent_containers/food/drinks/bottle/kahlua{pixel_x = -16; pixel_y = 4},/obj/item/reagent_containers/food/drinks/bottle/sake{pixel_x = 8; pixel_y = 11},/obj/item/reagent_containers/food/drinks/bottle/vermouth{pixel_x = 5; pixel_y = 7},/obj/item/reagent_containers/food/drinks/bottle/patron{pixel_x = -4; pixel_y = 6},/obj/item/reagent_containers/food/drinks/bottle/vodka{pixel_x = 9; pixel_y = 5},/turf/open/floor/wood/parquet,/area/train)
+"rR" = (/obj/structure/chair/sofa/right{dir = 1},/turf/open/floor/wood/parquet,/area/train)
+"rU" = (/obj/effect/turf_decal/siding/wood{dir = 1},/turf/open/floor/carpet/red,/area/train)
+"rX" = (/obj/effect/turf_decal/siding/wood/corner{dir = 8},/turf/open/floor/carpet/royalblue,/area/train)
+"sc" = (/obj/effect/turf_decal/siding/wood/corner,/turf/open/floor/carpet/red,/area/train)
+"se" = (/obj/effect/turf_decal/siding/wood{dir = 5},/turf/open/floor/carpet/red,/area/train)
+"sj" = (/obj/structure/sink/kitchen{desc = "A sink used for washing one's hands and face. It looks rusty and home-made"; dir = 4; name = "old sink"; pixel_x = -12},/turf/open/floor/wood,/area/train)
+"sl" = (/obj/effect/turf_decal/tile/neutral{dir = 1},/obj/effect/turf_decal/tile/neutral,/obj/effect/turf_decal/tile/neutral{dir = 4},/obj/effect/turf_decal/tile/neutral{dir = 8},/obj/structure/table/reinforced,/turf/open/floor/iron/dark/textured,/area/train)
+"so" = (/obj/structure/table/reinforced,/obj/effect/turf_decal/tile/neutral{dir = 1},/obj/effect/turf_decal/tile/neutral,/obj/effect/turf_decal/tile/neutral{dir = 4},/obj/effect/turf_decal/tile/neutral{dir = 8},/turf/open/floor/iron/dark/textured,/area/train)
+"su" = (/obj/machinery/door/airlock/wood/glass{name = "Room 6/3"},/turf/open/floor/wood/tile,/area/train)
+"sA" = (/obj/effect/turf_decal/siding/wood{dir = 8},/turf/open/floor/carpet/royalblue,/area/train)
+"sL" = (/obj/machinery/door/airlock/wood/glass{name = "Room 4/4"},/turf/open/floor/wood/tile,/area/train)
+"sQ" = (/obj/machinery/door/airlock/wood/glass{name = "Room 2/4"},/turf/open/floor/wood/tile,/area/train)
+"ts" = (/obj/item/kirbyplants{icon_state = "plant-05"},/obj/effect/turf_decal/siding/wood{dir = 6},/turf/open/floor/carpet/royalblue,/area/train)
+"tM" = (/obj/machinery/door/airlock/wood/glass{name = "Room 4/3"},/turf/open/floor/wood/tile,/area/train)
+"tO" = (/obj/structure/rack,/turf/open/floor/wood,/area/train)
+"tX" = (/obj/effect/turf_decal/siding/wood{dir = 4},/turf/open/floor/carpet/royalblue,/area/train)
+"ue" = (/obj/effect/landmark/train_smoke,/obj/effect/landmark/from_train_to_stop_transition{dir = 1},/turf/open/space/basic,/area/space)
+"uf" = (/obj/structure/fans/tiny,/turf/open/floor/wood,/area/train)
+"um" = (/obj/structure/sign/directions/command{desc = "A sign, clearly indicating the room number of the room you're currently looking at."; dir = 8; icon_state = "roomnum"; name = "room sign"; pixel_y = 25},/obj/item/storage/briefcase{name = "suitcase"; pixel_y = 10},/obj/effect/turf_decal/siding/wood{dir = 1},/turf/open/floor/carpet/royalblue,/area/train)
+"uD" = (/obj/effect/turf_decal/siding/wood,/turf/open/floor/carpet/royalblack,/area/train)
+"uK" = (/obj/structure/fans/tiny,/obj/machinery/door/airlock/glass_large{name = "Carriage 6"},/turf/open/floor/wood,/area/train)
+"vb" = (/obj/structure/table/wood/fancy/blue,/turf/open/floor/wood/parquet,/area/train)
+"vm" = (/obj/machinery/door/airlock/public/glass{name = "Carriage 5- Bar Car"},/turf/open/floor/wood,/area/train)
+"vH" = (/turf/template_noop,/area/space)
+"wf" = (/obj/structure/sign/directions/command{desc = "A sign, clearly indicating the room number of the room you're currently looking at."; icon_state = "roomnum"; name = "room sign"; pixel_y = 25},/obj/effect/turf_decal/siding/wood{dir = 1},/turf/open/floor/carpet/red,/area/train)
+"wh" = (/obj/structure/showcase/fakeid,/turf/open/floor/iron/dark/textured,/area/train)
+"wj" = (/obj/structure/chair/sofa/corner,/obj/structure/railing{dir = 4},/turf/open/floor/wood/parquet,/area/train)
+"wu" = (/obj/effect/turf_decal/siding/white/corner{dir = 8},/turf/open/floor/iron/dark,/area/train)
+"wy" = (/turf/open/floor/carpet/green,/area/train)
+"xl" = (/obj/structure/chair/comfy/brown{dir = 8},/turf/open/floor/wood/parquet,/area/train)
+"xr" = (/obj/structure/chair/sofa/left{dir = 1},/turf/open/floor/wood/parquet,/area/train)
+"xA" = (/obj/structure/chair/sofa/corner{dir = 4},/turf/open/floor/wood/parquet,/area/train)
+"xW" = (/obj/effect/turf_decal/siding/white/corner,/turf/open/floor/iron/dark,/area/train)
+"xY" = (/obj/effect/turf_decal/siding/wood{dir = 1},/turf/open/floor/carpet/green,/area/train)
+"yj" = (/obj/effect/turf_decal/siding/white{dir = 8},/obj/structure/musician/piano{icon_state = "piano"; name = "space verlitzer"},/turf/open/floor/iron/dark,/area/train)
+"yt" = (/obj/structure/curtain/cloth/fancy/mechanical{id = "4/2"},/turf/closed/indestructible/opsglass,/area/train)
+"yX" = (/obj/effect/landmark/transition_train_origin,/turf/template_noop,/area/template_noop)
+"yZ" = (/obj/effect/turf_decal/siding/white{dir = 10},/obj/structure/railing,/turf/open/floor/iron/dark,/area/train)
+"zk" = (/obj/structure/chair/wood{dir = 4},/turf/open/floor/wood/parquet,/area/train)
+"zZ" = (/obj/machinery/door/airlock/wood/glass{name = "Room 2/3"},/turf/open/floor/wood/tile,/area/train)
+"Ah" = (/turf/closed/indestructible/wood,/area/train)
+"Aw" = (/obj/effect/turf_decal/siding/wood{dir = 10},/turf/open/floor/wood,/area/train)
+"Ay" = (/obj/effect/turf_decal/tile/neutral{dir = 1},/obj/effect/turf_decal/tile/neutral,/obj/effect/turf_decal/tile/neutral{dir = 4},/obj/effect/turf_decal/tile/neutral{dir = 8},/obj/structure/closet/secure_closet/freezer/kitchen,/turf/open/floor/iron/dark/textured,/area/train)
+"AO" = (/obj/effect/turf_decal/siding/wood/corner{dir = 1},/turf/open/floor/carpet/red,/area/train)
+"BJ" = (/obj/effect/turf_decal/siding/wood{dir = 9},/turf/open/floor/carpet/green,/area/train)
+"BT" = (/obj/effect/turf_decal/siding/wood/corner,/turf/open/floor/carpet/green,/area/train)
+"Cq" = (/obj/effect/turf_decal/siding/wood{dir = 10},/turf/open/floor/carpet/green,/area/train)
+"Cr" = (/obj/effect/turf_decal/siding/wood,/turf/open/floor/carpet/green,/area/train)
+"CJ" = (/obj/effect/turf_decal/siding/wood{dir = 9},/turf/open/floor/carpet/royalblue,/area/train)
+"CR" = (/turf/closed/indestructible/opshuttle,/area/train)
+"CT" = (/obj/machinery/oven,/obj/effect/turf_decal/tile/neutral{dir = 1},/obj/effect/turf_decal/tile/neutral,/obj/effect/turf_decal/tile/neutral{dir = 4},/obj/effect/turf_decal/tile/neutral{dir = 8},/turf/open/floor/iron/dark/textured,/area/train)
+"CZ" = (/obj/machinery/griddle,/obj/effect/turf_decal/tile/neutral{dir = 1},/obj/effect/turf_decal/tile/neutral,/obj/effect/turf_decal/tile/neutral{dir = 4},/obj/effect/turf_decal/tile/neutral{dir = 8},/turf/open/floor/iron/dark/textured,/area/train)
+"Dh" = (/obj/effect/turf_decal/tile/dark{dir = 1},/obj/effect/turf_decal/tile/dark,/obj/effect/turf_decal/siding/thinplating/dark,/turf/open/floor/iron/freezer,/area/train)
+"Dq" = (/obj/structure/sign/directions/command{desc = "A sign, clearly indicating the room number of the room you're currently looking at."; dir = 4; icon_state = "roomnum"; name = "room sign"; pixel_y = 25},/obj/effect/turf_decal/siding/wood{dir = 1},/turf/open/floor/carpet/red,/area/train)
+"DI" = (/obj/structure/table/wood,/obj/effect/turf_decal/siding/wood{dir = 1},/turf/open/floor/carpet/green,/area/train)
+"DL" = (/obj/structure/chair/comfy/shuttle{dir = 4},/turf/open/floor/iron,/area/train)
+"DO" = (/obj/structure/chair/sofa/right{dir = 8},/turf/open/floor/wood/parquet,/area/train)
+"DW" = (/turf/open/floor/plating,/area/train)
+"Ek" = (/obj/structure/sign/directions/command{desc = "A sign, clearly indicating the room number of the room you're currently looking at."; dir = 1; icon_state = "roomnum"; name = "room sign"; pixel_y = 25},/obj/effect/turf_decal/siding/wood{dir = 1},/turf/open/floor/carpet/red,/area/train)
+"Ex" = (/obj/structure/curtain/cloth/fancy/mechanical{id = "4/3"},/turf/closed/indestructible/opsglass,/area/train)
+"EJ" = (/obj/machinery/vending/boozeomat/all_access,/turf/open/floor/wood/parquet,/area/train)
+"Fi" = (/obj/effect/turf_decal/siding/wood{dir = 4},/turf/open/floor/carpet/red,/area/train)
+"Fl" = (/obj/effect/turf_decal/siding/white{dir = 6},/obj/structure/railing,/turf/open/floor/iron/dark,/area/train)
+"Fo" = (/obj/structure/table/reinforced,/obj/effect/turf_decal/tile/neutral{dir = 1},/obj/effect/turf_decal/tile/neutral,/obj/effect/turf_decal/tile/neutral{dir = 4},/obj/effect/turf_decal/tile/neutral{dir = 8},/obj/structure/sign/poster/official/cleanliness{pixel_y = 32},/turf/open/floor/iron/dark/textured,/area/train)
+"FH" = (/obj/effect/turf_decal/tile/dark{dir = 1},/obj/effect/turf_decal/tile/dark,/obj/effect/turf_decal/siding/thinplating/dark/corner,/turf/open/floor/iron/freezer,/area/train)
+"FM" = (/obj/structure/marker_beacon/burgundy,/turf/open/floor/plating,/area/train)
+"GA" = (/obj/effect/turf_decal/siding/wood/corner,/turf/open/floor/carpet/royalblue,/area/train)
+"GF" = (/turf/open/floor/carpet/royalblue,/area/train)
+"GH" = (/obj/effect/turf_decal/siding/white,/obj/structure/railing,/turf/open/floor/iron/dark,/area/train)
+"Ha" = (/obj/effect/turf_decal/siding/wood{dir = 10},/turf/open/floor/carpet/royalblue,/area/train)
+"Hn" = (/obj/effect/turf_decal/siding/wood/corner{dir = 4},/turf/open/floor/carpet/royalblue,/area/train)
+"HE" = (/obj/effect/turf_decal/siding/wood{dir = 5},/turf/open/floor/carpet/royalblue,/area/train)
+"HN" = (/obj/structure/chair/sofa/right{dir = 4},/obj/structure/railing{dir = 8},/turf/open/floor/wood/parquet,/area/train)
+"Ik" = (/obj/effect/turf_decal/siding/wood{dir = 10},/turf/open/floor/carpet/royalblack,/area/train)
+"Iu" = (/obj/effect/landmark/from_train_to_stop_transition,/obj/effect/landmark/train_smoke,/turf/open/space/basic,/area/space)
+"IN" = (/obj/effect/turf_decal/siding/wood{dir = 6},/turf/open/floor/carpet/royalblue,/area/train)
+"IZ" = (/obj/effect/turf_decal/tile/dark{dir = 1},/obj/effect/turf_decal/tile/dark,/obj/effect/turf_decal/siding/thinplating/dark{dir = 10},/turf/open/floor/iron/freezer,/area/train)
+"JS" = (/obj/structure/sign/directions/command{desc = "A sign, clearly indicating the room number of the room you're currently looking at."; dir = 1; icon_state = "roomnum"; name = "room sign"; pixel_y = 25},/obj/effect/turf_decal/siding/wood{dir = 1},/turf/open/floor/carpet/green,/area/train)
+"JV" = (/obj/machinery/door/airlock/grunge{name = "Kitchen"},/turf/open/floor/wood,/area/train)
+"JW" = (/obj/structure/chair/sofa{dir = 8},/obj/effect/turf_decal/siding/wood{dir = 8},/turf/open/floor/wood/tile,/area/train)
+"Kh" = (/obj/structure/railing/corner{dir = 4},/turf/open/space/basic,/area/space)
+"Ki" = (/obj/effect/turf_decal/siding/white{dir = 10},/turf/open/floor/iron/dark,/area/train)
+"Kn" = (/obj/machinery/washing_machine,/turf/open/floor/wood,/area/train)
+"Kr" = (/turf/open/floor/iron/dark,/area/train)
+"KY" = (/obj/structure/showcase/fakeid{dir = 8},/turf/open/floor/iron/dark/textured,/area/train)
+"Ld" = (/obj/machinery/door/airlock/public/glass{name = "Carriage 2"},/turf/open/floor/wood,/area/train)
+"Lk" = (/obj/machinery/door/airlock/wood/glass{name = "Room 4/2"},/turf/open/floor/wood/tile,/area/train)
+"Lm" = (/turf/open/floor/carpet/red,/area/train)
+"Lp" = (/obj/effect/turf_decal/tile/neutral{dir = 1},/obj/effect/turf_decal/tile/neutral,/obj/effect/turf_decal/tile/neutral{dir = 4},/obj/effect/turf_decal/tile/neutral{dir = 8},/obj/structure/closet/secure_closet/freezer/fridge,/turf/open/floor/iron/dark/textured,/area/train)
+"LX" = (/obj/effect/turf_decal/siding/wood/corner{dir = 4},/turf/open/floor/carpet/red,/area/train)
+"Md" = (/obj/structure/table/reinforced,/turf/open/floor/wood,/area/train)
+"Mr" = (/obj/structure/railing/corner,/turf/open/space/basic,/area/space)
+"Mv" = (/obj/structure/fans/tiny,/obj/machinery/door/airlock/glass_large{name = "Staff Carriage"},/turf/open/floor/wood,/area/train)
+"MJ" = (/obj/machinery/door/airlock/public/glass{name = "Carriage 4"},/turf/open/floor/wood,/area/train)
+"MU" = (/obj/structure/chair/sofa/left{dir = 4},/turf/open/floor/wood/parquet,/area/train)
+"NQ" = (/obj/effect/turf_decal/tile/dark{dir = 1},/obj/effect/turf_decal/tile/dark,/obj/effect/turf_decal/siding/thinplating/dark{dir = 5},/turf/open/floor/iron/freezer,/area/train)
+"NY" = (/obj/structure/sign/directions/command{desc = "A sign, clearly indicating the room number of the room you're currently looking at."; dir = 4; icon_state = "roomnum"; name = "room sign"; pixel_y = 25},/obj/effect/turf_decal/siding/wood{dir = 1},/turf/open/floor/carpet/royalblue,/area/train)
+"Og" = (/obj/machinery/door/airlock/public/glass{name = "Carriage 1- Dining Car"},/turf/open/floor/wood,/area/train)
+"Op" = (/obj/effect/turf_decal/siding/wood/corner{dir = 4},/turf/open/floor/carpet/green,/area/train)
+"OY" = (/obj/effect/turf_decal/tile/dark{dir = 1},/obj/effect/turf_decal/tile/dark,/obj/structure/sink/kitchen{pixel_y = 15},/obj/effect/turf_decal/siding/thinplating/dark{dir = 1},/turf/open/floor/iron/freezer,/area/train)
+"Pd" = (/obj/structure/fans/tiny,/obj/machinery/door/airlock/glass_large{name = "Carriage 2"},/turf/open/floor/wood,/area/train)
+"PV" = (/obj/effect/turf_decal/siding/wood{dir = 1},/turf/open/floor/carpet/royalblack,/area/train)
+"Qm" = (/turf/closed/indestructible/opsglass,/area/train)
+"QB" = (/obj/machinery/door/airlock/grunge{name = "Staff Area"},/turf/open/floor/wood,/area/train)
+"QK" = (/obj/effect/turf_decal/tile/neutral{dir = 1},/obj/effect/turf_decal/tile/neutral,/obj/effect/turf_decal/tile/neutral{dir = 4},/obj/effect/turf_decal/tile/neutral{dir = 8},/obj/structure/reagent_dispensers/cooking_oil,/turf/open/floor/iron/dark/textured,/area/train)
+"QO" = (/obj/machinery/deepfryer,/obj/effect/turf_decal/tile/neutral{dir = 1},/obj/effect/turf_decal/tile/neutral,/obj/effect/turf_decal/tile/neutral{dir = 4},/obj/effect/turf_decal/tile/neutral{dir = 8},/turf/open/floor/iron/dark/textured,/area/train)
+"Rk" = (/obj/machinery/door/airlock/wood/glass{name = "Room 6/2"},/turf/open/floor/wood/tile,/area/train)
+"Rs" = (/turf/open/floor/wood/parquet,/area/train)
+"RN" = (/obj/effect/landmark/from_train_to_stop_transition{dir = 6},/obj/effect/landmark/train_smoke,/turf/open/space/basic,/area/train)
+"Si" = (/obj/effect/turf_decal/siding/wood{dir = 10},/turf/open/floor/carpet/red,/area/train)
+"Sr" = (/obj/effect/turf_decal/siding/wood/corner{dir = 1},/turf/open/floor/carpet/royalblack,/area/train)
+"Ss" = (/obj/effect/turf_decal/siding/wood,/turf/open/floor/carpet/red,/area/train)
+"Su" = (/obj/structure/table/wood,/obj/machinery/chem_dispenser/drinks/fullupgrade,/turf/open/floor/wood/parquet,/area/train)
+"SG" = (/obj/effect/turf_decal/siding/wood/corner{dir = 1},/turf/open/floor/carpet/green,/area/train)
+"SO" = (/obj/effect/turf_decal/siding/wood,/turf/open/floor/carpet/royalblue,/area/train)
+"Ti" = (/obj/structure/sign/directions/command{desc = "A sign, clearly indicating the room number of the room you're currently looking at."; dir = 8; icon_state = "roomnum"; name = "room sign"; pixel_y = 25},/obj/item/storage/briefcase{name = "suitcase"; pixel_y = 10},/obj/effect/turf_decal/siding/wood{dir = 1},/turf/open/floor/carpet/red,/area/train)
+"Tj" = (/obj/structure/sign/directions/command{desc = "A sign, clearly indicating the room number of the room you're currently looking at."; dir = 8; icon_state = "roomnum"; name = "room sign"; pixel_y = 25},/obj/item/storage/briefcase{name = "suitcase"; pixel_y = 10},/obj/effect/turf_decal/siding/wood{dir = 1},/turf/open/floor/carpet/green,/area/train)
+"TE" = (/obj/effect/turf_decal/siding/wood/corner{dir = 8},/turf/open/floor/carpet/royalblack,/area/train)
+"TO" = (/obj/structure/chair/stool/directional/north,/turf/open/floor/wood/parquet,/area/train)
+"UI" = (/obj/effect/turf_decal/siding/wood{dir = 9},/turf/open/floor/carpet/royalblack,/area/train)
+"UL" = (/obj/structure/chair/wood{dir = 8},/turf/open/floor/wood/parquet,/area/train)
+"UR" = (/obj/effect/turf_decal/siding/wood{dir = 8},/turf/open/floor/carpet/red,/area/train)
+"Vv" = (/obj/structure/railing{dir = 4},/obj/effect/landmark/from_train_to_stop_transition{dir = 8},/obj/effect/landmark/train_smoke,/turf/open/space/basic,/area/space)
+"VE" = (/turf/template_noop,/area/template_noop)
+"VQ" = (/obj/item/kirbyplants{icon_state = "plant-08"},/turf/open/floor/wood/parquet,/area/train)
+"VT" = (/obj/machinery/door/airlock/wood/glass{name = "Room 6/4"},/turf/open/floor/wood/tile,/area/train)
+"Wz" = (/obj/structure/rack,/turf/open/floor/iron/dark/textured,/area/train)
+"WE" = (/obj/effect/turf_decal/siding/wood{dir = 8},/turf/open/floor/carpet/royalblack,/area/train)
+"WG" = (/obj/machinery/door/airlock/public/glass{name = "Staff Carriage"},/turf/open/floor/wood,/area/train)
+"Xc" = (/obj/effect/turf_decal/tile/dark{dir = 1},/obj/effect/turf_decal/tile/dark,/obj/effect/turf_decal/siding/thinplating/dark{dir = 6},/turf/open/floor/iron/freezer,/area/train)
+"Xh" = (/obj/machinery/door/airlock/wood/glass{name = "Room 2/1"},/turf/open/floor/wood/tile,/area/train)
+"Xi" = (/obj/machinery/door/airlock/wood/glass{name = "Room 6/1"},/turf/open/floor/wood/tile,/area/train)
+"XF" = (/obj/structure/railing{dir = 1},/obj/effect/landmark/from_train_to_stop_transition{dir = 10},/obj/effect/landmark/train_smoke,/turf/open/space/basic,/area/space)
+"XJ" = (/obj/machinery/door/airlock/public/glass{name = "Carriage 3- Sleeper Carriage"},/turf/open/floor/wood,/area/train)
+"XN" = (/obj/machinery/door/airlock/public/glass{name = "Carriage 6"},/turf/open/floor/wood,/area/train)
+"Yr" = (/obj/structure/chair/sofa/left{dir = 8},/obj/structure/railing{dir = 4},/turf/open/floor/wood/parquet,/area/train)
+"Yy" = (/obj/structure/showcase/fakeid{dir = 1},/turf/open/floor/iron/dark/textured,/area/train)
+"YD" = (/obj/effect/turf_decal/siding/wood/corner{dir = 8},/turf/open/floor/carpet/red,/area/train)
+"Zf" = (/obj/effect/turf_decal/tile/dark{dir = 1},/obj/effect/turf_decal/tile/dark,/obj/effect/turf_decal/siding/thinplating/dark/corner{dir = 4},/turf/open/floor/iron/freezer,/area/train)
+"ZH" = (/obj/structure/curtain/cloth/fancy,/turf/closed/indestructible/opsglass,/area/train)
+"ZS" = (/turf/open/floor/wood,/area/train)
 
 (1,1,1) = {"
-I
-b
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-b
-b
-"}
-(2,1,1) = {"
-b
-V
-L
-D
-L
-L
-D
-L
-L
-D
-L
-L
-D
-F
-F
-D
-L
-L
-D
-L
-L
-D
-L
-L
-D
-L
-L
-D
-L
-L
-j
-b
-"}
-(3,1,1) = {"
-l
-D
-M
-t
-t
-t
-t
-t
-t
-t
-t
-t
-t
-M
-M
-t
-t
-t
-t
-t
-t
-t
-t
-t
-t
-t
-t
-t
-t
-M
-D
-p
-"}
-(4,1,1) = {"
-l
-D
-M
-M
-M
-M
-M
-M
-M
-M
-M
-M
-M
-M
-M
-M
-M
-M
-M
-M
-M
-M
-M
-M
-M
-M
-M
-M
-M
-M
-D
-p
-"}
-(5,1,1) = {"
-l
-D
-M
-M
-M
-M
-M
-M
-M
-M
-M
-M
-M
-M
-M
-M
-M
-M
-M
-M
-M
-M
-M
-M
-M
-M
-M
-M
-M
-M
-D
-p
-"}
-(6,1,1) = {"
-l
-D
-M
-M
-M
-M
-M
-M
-M
-M
-M
-M
-M
-M
-M
-M
-M
-M
-M
-M
-M
-M
-M
-M
-M
-M
-M
-M
-M
-M
-D
-p
-"}
-(7,1,1) = {"
-l
-D
-M
-M
-M
-M
-M
-M
-M
-M
-M
-M
-M
-M
-M
-M
-M
-M
-M
-M
-M
-M
-M
-M
-M
-M
-M
-M
-M
-M
-D
-p
-"}
-(8,1,1) = {"
-l
-D
-M
-M
-M
-M
-M
-M
-M
-M
-M
-M
-M
-M
-M
-M
-M
-M
-M
-M
-M
-M
-M
-M
-M
-M
-M
-M
-M
-M
-D
-p
-"}
-(9,1,1) = {"
-l
-D
-M
-M
-M
-M
-M
-M
-M
-M
-M
-M
-M
-M
-M
-M
-M
-M
-M
-M
-M
-M
-M
-M
-M
-M
-M
-M
-M
-M
-D
-p
-"}
-(10,1,1) = {"
-l
-D
-M
-K
-K
-K
-K
-K
-K
-K
-K
-K
-K
-M
-M
-K
-K
-K
-K
-K
-K
-K
-K
-K
-K
-K
-K
-K
-K
-M
-D
-p
-"}
-(11,1,1) = {"
-b
-Y
-L
-D
-L
-L
-D
-L
-L
-D
-L
-L
-D
-F
-F
-D
-L
-L
-D
-L
-L
-D
-L
-L
-D
-L
-L
-D
-L
-L
-f
-b
-"}
-(12,1,1) = {"
-b
-b
-x
-x
-x
-x
-x
-x
-x
-x
-x
-x
-x
-x
-x
-x
-x
-x
-x
-x
-x
-x
-x
-x
-x
-x
-x
-x
-x
-x
-b
-b
+yXVEaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxvHaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxvHaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxvHaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxvHaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxvHaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxvHaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxaxvHaxaxaxaxaxVEVE
+MriQAhZHuKufAhemememAhiTiTiTAhhKhKhKAhmEmEmEAhuKufZHAhvHAhZHZHZHAhZHZHZHAhAhAhAhAhAhAhAhAhZHZHZHAhZHZHZHAhvHAhZHolufAhoxoxoxAhExExExAhytytytAhrxrxrxAholufZHAhvHAhZHZHZHAhZHZHZHAhZHZHZHAhZHZHZHAhZHZHZHAhZHZHZHAhvHAhZHPdufAhoxoxoxAhExExExAhytytytAhrxrxrxAhPdufZHAhvHAhZHZHZHAhZHZHZHAhAhAhAhAhAhAhAhAhZHZHZHAhZHZHZHAhvHAhZHMvufAhQmQmQmAhQmQmQmAhQmQmQmAhQmQmQmAhMvufZHAhvHmqmqQmQmmqjkVE
+VvFMAhltBJmuAhkNDIJWAhkNDIJWAhkNDIJWAhkNDIJWAhBJmutOAhueAhMUeeDOpSeexleemWEJSucWfxrJSuEJmWeepSeexlMUeeDOAhueAhltdfseAhkNoeJWAhkNoeJWAhkNoeJWAhkNoeJWAhdfsetOAhueAhZSZSZSZSZSZSZSZSZSZSZSZSZSZSZSZSZSZSZSZSZSZSZSAhueAhltCJHEAhkNlcJWAhkNlcJWAhkNlcJWAhkNlcJWAhCJHEtOAhueAhzkvbULxArprprpwjyjrcKrKrKrKrglnRrprprpiczkvbULAhueAhZSUIhmAhqRCZCZFoCTCTlaAhKnfQKnAhZSZSZSAhhrhrdyAhuemqWzwhwhmqmqlF
+VvDWZHtOrejgAhkNwyJWAhkNwyJWAhkNwyJWAhkNwyJWAhrejgtOAhCRAhokeeewRsRsRsRsRsRsRsRsRsRsRsRsRsRsRsRsRsokeeewAhCRAhtOURFiAhkNLmJWAhkNLmJWAhkNLmJWAhkNLmJWAhURFitOAhCRAhZSZSZSZSZSZSZSZSZSZSZSZSZSZSZSZSZSZSZSZSZSZSZSAhCRAhtOsAtXAhkNGFJWAhkNGFJWAhkNGFJWAhkNGFJWAhsAtXtOAhCRAhzkvbULokvbffvbYrKiwuKrKrKrxWclHNvbffvbewzkvbULAhCRAhZSWEnLAhslhsNQsohsNQodAhZSZSZSAhZSZSZSAhhrhrAwAhCRmqWzfdDLKYQmlF
+VvDWZHtOrejgAhkNCrnwAhkNCrJWAhkNCrJWAhkNCrJWAhreOpmuXNDWvmBJxYxYxYmuVQeeeeeeeeeeeeeeeeeeeeeepfBJxYxYxYmuvmDWMJdfAOFiAhkNSsnwAhkNSsJWAhkNSsJWAhkNSsJWAhURLXseMJDWXJZSZSZSZSZSZSZSZSZSZSZSZSZSZSZSZSZSZSZSZSZSZSZSXJDWLdCJgitXAhkNSOnwAhkNSOJWAhkNSOJWAhkNSOJWAhsAHnHELdDWOgCJhQhQhQhQhQhQHElkyZGHGHGHFllkCJhQhQhQhQhQhQHEOgDWWGUISrnLJVhsjyZfOYjyZfNQJVUIPVPVPVPVPVhmQBhrhrhrWGDWavfdfdfdKYQmlF
+VvDWZHtOrejgAhQmVTQmAhQmsuQmAhQmRkQmAhQmXiQmAhreBTjzXNDWvmCqCrCrdGOpxYxYxYxYxYxYxYxYxYxYxYxYxYSGBTCrCrjzvmDWMJSiYDFiAhQmsLQmAhQmtMQmAhQmLkQmAhQmfFQmAhURscgLMJDWXJZSZSZSZSZSZSZSZSZSZSZSZSZSZSZSZSZSZSZSZSZSZSZSXJDWLdHarXtXAhQmsQQmAhQmzZQmAhQmhCQmAhQmXhQmAhsAGAINLdDWOgHaSOSOSOSOSOrXHnhQhQhQhQhQhQhQgiGASOSOSOSOSOINOgDWWGIkTEnLJVIZnhFHDhnhFHXcJVIkuDuDuDuDuDmTQBhrhrhrWGDWavfdfdfdKYQmlF
+VvDWZHtOreOpxYxYxYxYTjxYxYxYhwxYxYxYJSxYxYxYjmSGjgtOAhCRAhMUeeDOCqCrCrCrCrCrCrCrCrCrCrCrCrCrCrCrjzMUeeDOAhCRAhtOURLXrUrUrUrUTirUrUrUDqrUrUrUEkrUrUrUwfAOFitOAhCRAhZSZSZSZSZSZSZSZSZSZSZSZSZSZSZSZSZSZSZSZSZSZSZSAhCRAhtOsAHnhQhQhQhQumhQhQhQNYhQhQhQhVhQhQhQdagitXtOAhCRAhzkvbULzkvbULHaSOSOSOSOSOSOSOSOSOINzkvbULzkvbULAhCRAhZSWEnLAhsoIZXciwIZXcAyAhsjZSapAhZSZSZSAhhrhrqzAhCRmqWzfdDLKYQmlF
+VvFMAhtOCqCrCrCrCrCrCrCrCrCrCrCrCrCrCrCrCrCrCrCrjztOAhIuAhokeeewpSeexlpSeexlxrrReexrrRpSeexlpSeexlokeeewAhIuAhtOSiSsSsSsSsSsSsSsSsSsSsSsSsSsSsSsSsSsSsSsgLtOAhIuAhZSZSZSZSZSZSZSZSZSZSZSZSZSZSZSZSZSZSZSZSZSZSZSAhIuAhtOHaSOSOSOSOSOSOSOSOSOSOSOSOSOSOSOSOSOSOSOtstOAhIuAhzkvbULzkvbULzkvbULTOTOTOTOTOzkvbULzkvbULzkvbULAhIuAhZSIkmTAhQKQOQOsoLpeNsoAhMdMdfyAhZSZSZSAhhrhrdyAhIumqWzYyYymqmqlF
+KhXFAhZHuKufAhZHZHZHAhZHZHZHAhZHZHZHAhZHZHZHAhuKufZHAhvHAhZHZHZHAhZHZHZHAhZHZHZHAhZHZHZHAhZHZHZHAhZHZHZHAhvHAhZHolufAhZHZHZHAhZHZHZHAhZHZHZHAhZHZHZHAholufZHAhvHAhZHZHZHAhZHZHZHAhZHZHZHAhZHZHZHAhZHZHZHAhZHZHZHAhvHAhZHPdufAhZHZHZHAhZHZHZHAhZHZHZHAhZHZHZHAhPdufZHAhvHAhZHZHZHAhZHZHZHAhZHZHZHAhZHZHZHAhZHZHZHAhZHZHZHAhvHAhZHMvufAhQmQmQmAhQmQmQmAhQmQmQmAhQmQmQmAhMvufZHAhvHmqmqQmQmmqRNVE
+VEVEIuIuIuIuIuIuIuIuIuIuIuIuIuIuIuIuIuIuIuIuIuIuIuIuIuvHIuIuIuIuIuIuIuIuIuIuIuIuIuIuIuIuIuIuIuIuIuIuIuIuIuvHIuIuIuIuIuIuIuIuIuIuIuIuIuIuIuIuIuIuIuIuIuIuIuIuIuvHIuIuIuIuIuIuIuIuIuIuIuIuIuIuIuIuIuIuIuIuIuIuIuIuIuvHIuIuIuIuIuIuIuIuIuIuIuIuIuIuIuIuIuIuIuIuIuIuIuIuIuvHIuIuIuIuIuIuIuIuIuIuIuIuIuIuIuIuIuIuIuIuIuIuIuIuIuvHIuIuIuIuIuIuIuIuIuIuIuIuIuIuIuIuIuIuIuIuIuIuIuIuIuvHIuIuIuIuIuVEVE
 "}

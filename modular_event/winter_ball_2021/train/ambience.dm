@@ -1,4 +1,8 @@
 /area/train
+	area_has_base_lighting = TRUE
+	base_lighting_alpha = 255
+	static_lighting = FALSE
+
 	var/list/datum/looping_sound/looping_sounds = list()
 
 /datum/looping_sound/train_loop
