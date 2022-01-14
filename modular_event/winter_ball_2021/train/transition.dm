@@ -154,11 +154,19 @@ GLOBAL_VAR(train_origin)
 
 	return ..()
 
-/atom/movable/turf_transition_blocker/CanPass(atom/movable/mover, border_dir)
+/atom/movable/turf_transition_blocker/CanAllowThrough(atom/movable/mover, border_dir)
 	if (!..())
 		return FALSE
 
 	return !watching.is_blocked_turf()
+
+/atom/movable/turf_transition_blocker/Bumped(atom/movable/bumped_atom)
+	. = ..()
+
+	for (var/atom/movable/content as anything in watching.contents)
+		if (!content.CanPass(bumped_atom, get_dir(bumped_atom, src)))
+			bumped_atom.Bump(content)
+			return
 
 /atom/movable/turf_transition_blocker/proc/on_entered(turf/source, atom/movable/arrived)
 	SIGNAL_HANDLER
