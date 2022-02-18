@@ -534,6 +534,10 @@
 	if(glide_size_override)
 		set_glide_size(glide_size_override)
 
+	// EVENT EDIT: All moves should be treated as diagonal so that the 8-dir penguin sprites work properly
+	. = ..()
+
+	/*
 	if(loc != newloc)
 		if (!(direct & (direct - 1))) //Cardinal move
 			. = ..()
@@ -589,6 +593,9 @@
 					newtonian_move(direct)
 			moving_diagonally = 0
 			return
+	*/
+
+	// END EVENT EDIT
 
 	if(!loc || (loc == oldloc && oldloc != newloc))
 		last_move = 0

@@ -2,3 +2,6 @@ ALLOW_RANDOM_EVENTS 0
 ENABLE_NIGHT_SHIFTS 0
 LAVALAND_BUDGET 0
 SPACE_BUDGET 0
+
+# We shouldn't be using preferences at all, so save me 20 seconds of init time
+CACHE_ASSETS
