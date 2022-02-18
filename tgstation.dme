@@ -4307,5 +4307,11 @@
 #include "modular_event\base\no_destruction.dm"
 #include "modular_event\base\no_diseases.dm"
 #include "modular_event\base\station_traits.dm"
+#include "modular_event\club_penguin\mapping\areas.dm"
+#include "modular_event\club_penguin\mapping\block_old_mapping.dm"
+#include "modular_event\club_penguin\mapping\camera.dm"
+#include "modular_event\club_penguin\mapping\fix_cordons.dm"
+#include "modular_event\club_penguin\mapping\maps.dm"
+#include "modular_event\club_penguin\mapping\replace_with_maps.dm"
 #include "modular_event\club_penguin\penguin\code\penguin.dm"
 // END_INCLUDE
