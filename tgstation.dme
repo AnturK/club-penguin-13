@@ -4314,4 +4314,5 @@
 #include "modular_event\club_penguin\mapping\maps.dm"
 #include "modular_event\club_penguin\mapping\replace_with_maps.dm"
 #include "modular_event\club_penguin\penguin\code\penguin.dm"
+#include "modular_event\club_penguin\penguin\code\player_card.dm"
 // END_INCLUDE

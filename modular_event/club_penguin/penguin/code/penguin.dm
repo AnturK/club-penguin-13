@@ -1,6 +1,7 @@
 /mob/living/basic/club_penguin
 	name = "penguin"
 	icon = 'modular_event/club_penguin/penguin/icons/penguin.dmi'
+	appearance_flags = PIXEL_SCALE | TILE_BOUND | KEEP_TOGETHER
 	living_flags = NONE
 
 	maptext_width = 256
@@ -9,7 +10,7 @@
 
 	var/penguin_color
 
-/mob/living/basic/club_penguin/Initialize(mapload, name = "penguin", penguin_color = "#f00")
+/mob/living/basic/club_penguin/Initialize(mapload, name = "penguin", penguin_color = "#ff0000")
 	. = ..()
 
 	src.name = name

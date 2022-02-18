@@ -1,0 +1,18 @@
+@use 'sass:color';
+@use 'sass:meta';
+
+.theme-clubpenguin {
+  .Button__clubpenguin-close {
+    background: linear-gradient(120deg, hsl(208, 100%, 30%), hsl(210, 100%, 20%));
+
+    &:hover {
+      background: linear-gradient(120deg, hsl(208, 100%, 80%), hsl(210, 100%, 35%));
+    }
+  }
+
+  .Layout__content {
+    background: #0280CC;
+    background-image: none;
+    color: #000;
+  }
+}
