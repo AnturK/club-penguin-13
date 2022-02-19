@@ -20,7 +20,7 @@ GLOBAL_LIST_INIT(club_penguin_clothing, init_club_penguin_clothing())
 
 	var/slot
 
-	var/pixel_y = 15
+	var/pixel_y = 0
 
 /datum/club_penguin_clothing/vv_edit_var(var_name, var_value)
 	. = ..()
@@ -35,3 +35,4 @@ GLOBAL_LIST_INIT(club_penguin_clothing, init_club_penguin_clothing())
 	club_penguin_id = 429
 	icon = 'modular_event/club_penguin/clothing/icons/mining_helmet.dmi'
 	slot = CP_CLOTHING_SLOT_HEAD
+	pixel_y = 15
