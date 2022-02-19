@@ -1,0 +1,1 @@
+#define CP_CLOTHING_SLOT_HEAD "Head"

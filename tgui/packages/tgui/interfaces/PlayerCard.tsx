@@ -8,6 +8,7 @@ import { CpWindow } from "../layouts/CpWindow";
 type PlayerCardData = {
   name: string,
   color: string,
+  worn_items: number[],
 };
 
 const CARD_ASSET_STYLE: CSSProperties = {
@@ -90,7 +91,10 @@ export const PlayerCard = (props, context) => {
           }}>
             <PenguinBody color={data.color} />
             <CardAsset url={resolveAsset("penguin-features.png")} />
-            <CardAsset url={assetForItemId(429)} />
+
+            {data.worn_items.map(itemId => (
+              <CardAsset key={itemId} url={assetForItemId(itemId)} />
+            ))}
           </Box>
         </Stack.Item>
       </Stack>

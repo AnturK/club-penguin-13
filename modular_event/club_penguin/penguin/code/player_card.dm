@@ -21,6 +21,14 @@
 	data["name"] = name
 	data["color"] = penguin_color
 
+	var/list/worn_items = list()
+
+	for (var/clothing_type in equipped_clothing)
+		var/datum/club_penguin_clothing/clothing = GLOB.club_penguin_clothing[clothing_type]
+		worn_items += clothing.club_penguin_id
+
+	data["worn_items"] = worn_items
+
 	return data
 
 /mob/living/basic/club_penguin/ui_assets(mob/user)
