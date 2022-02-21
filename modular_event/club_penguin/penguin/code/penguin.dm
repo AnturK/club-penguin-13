@@ -1,5 +1,7 @@
 GLOBAL_LIST_EMPTY(penguins)
 
+#define ANIMATION_STATE_DANCE "dance"
+
 /mob/living/basic/club_penguin
 	name = "penguin"
 	icon = 'modular_event/club_penguin/penguin/icons/penguin.dmi'
@@ -10,7 +12,7 @@ GLOBAL_LIST_EMPTY(penguins)
 	maptext_x = -112
 	maptext_y = -8
 
-	var/dancing = FALSE
+	var/animation_state
 	var/penguin_color
 	var/list/equipped_clothing = list(/datum/club_penguin_clothing/miners_helmet)
 
@@ -33,41 +35,36 @@ GLOBAL_LIST_EMPTY(penguins)
 /mob/living/basic/club_penguin/Moved()
 	. = ..()
 
-	if (dancing)
-		dancing = FALSE
+	if (!isnull(animation_state))
+		animation_state = null
 		update_appearance(UPDATE_OVERLAYS)
 
 /mob/living/basic/club_penguin/proc/dance()
-	dancing = TRUE
+	animation_state = ANIMATION_STATE_DANCE
 	update_appearance(UPDATE_OVERLAYS)
 
-// I don't think GAGS lets us specify pixel_y
 /mob/living/basic/club_penguin/update_overlays()
 	. = ..()
 
 	var/body_state = "penguin_body"
 	var/features_state = "penguin_features"
-	var/show_clothing = TRUE
+	var/item_state = "item"
 
-	if (dancing)
-		body_state = "dance_body"
-		features_state = "dance_features"
-		show_clothing = FALSE
+	switch (animation_state)
+		if (ANIMATION_STATE_DANCE)
+			body_state = "dance_body"
+			features_state = "dance_features"
+			item_state = "dance"
 
 	var/image/penguin_body = image(icon, icon_state = body_state)
 	penguin_body.color = penguin_color
-	penguin_body.pixel_y = 4
 	. += penguin_body
 
 	. += image(icon, icon_state = features_state)
 
-	if (show_clothing)
-		for (var/clothing_type as anything in equipped_clothing)
-			var/datum/club_penguin_clothing/clothing = GLOB.club_penguin_clothing[clothing_type]
-
-			var/image/clothing_image = image(clothing.icon, icon_state = "item")
-			clothing_image.pixel_y = clothing.pixel_y
-			. += clothing_image
+	for (var/clothing_type as anything in equipped_clothing)
+		var/datum/club_penguin_clothing/clothing = GLOB.club_penguin_clothing[clothing_type]
+		. += image(clothing.icon, icon_state = item_state)
 
 	return .
 
