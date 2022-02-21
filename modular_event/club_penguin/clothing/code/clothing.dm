@@ -26,7 +26,7 @@ GLOBAL_LIST_INIT(club_penguin_clothing, init_club_penguin_clothing())
 	. = ..()
 
 	if (var_name == NAMEOF(src, pixel_y))
-		for (var/mob/living/basic/club_penguin/penguin in GLOB.mob_list)
+		for (var/mob/living/basic/club_penguin/penguin as anything in GLOB.penguins)
 			if (type in penguin.equipped_clothing)
 				penguin.update_appearance(UPDATE_OVERLAYS)
 

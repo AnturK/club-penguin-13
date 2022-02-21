@@ -11,6 +11,9 @@ PROTECT_MOUSE_ENTERED(/atom/movable/screen/lobby/button)
 PROTECT_MOUSE_ENTERED(/atom/movable/screen/movable/action_button)
 PROTECT_MOUSE_ENTERED(/atom/movable/screen/radial)
 
+// Club Penguin 13
+PROTECT_MOUSE_ENTERED(/atom/movable/screen/club_penguin_start)
+
 #undef PROTECT_MOUSE_ENTERED
 
 // Disables MouseEntered completely.

@@ -1,3 +1,5 @@
+GLOBAL_LIST_EMPTY(penguins)
+
 /mob/living/basic/club_penguin
 	name = "penguin"
 	icon = 'modular_event/club_penguin/penguin/icons/penguin.dmi'
@@ -18,9 +20,15 @@
 	src.name = name
 	src.penguin_color = penguin_color
 
+	GLOB.penguins += src
+
 	update_appearance()
 
 	create_nameplate()
+
+/mob/living/basic/club_penguin/Destroy()
+	GLOB.penguins -= src
+	return ..()
 
 /mob/living/basic/club_penguin/Moved()
 	. = ..()

@@ -29,6 +29,6 @@
 
 	update_loading_image()
 
-/mob/proc/create_temporay_loading_screen(decay = 2.5 SECONDS)
+/mob/proc/create_temporary_loading_screen(decay)
 	var/datum/club_penguin_loading_screen/loading_screen = new(src)
-	QDEL_IN(loading_screen, decay)
+	QDEL_IN(loading_screen, decay || rand(1.5 SECONDS, 3.5 SECONDS))
