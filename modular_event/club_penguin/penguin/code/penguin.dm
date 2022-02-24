@@ -50,6 +50,8 @@ GLOBAL_LIST_EMPTY(penguins)
 	var/features_state = "penguin_features"
 	var/item_state = "item"
 
+	// CP TODO: Throwing snowballs can't be a flick, since they can move to cancel it.
+	// Change the dmi export to be a 0-loop animation
 	switch (animation_state)
 		if (ANIMATION_STATE_DANCE)
 			body_state = "dance_body"
