@@ -9,6 +9,12 @@ import { CpButton } from "../components/CpButton";
 import { CpCloseButton } from "../components/CpCloseButton";
 import { CpWindow } from "../layouts/CpWindow";
 
+// WHAT ARE THOOOOOSE
+// https://stackoverflow.com/a/38648660/1910744
+if (typeof SVGElement.prototype.focus === 'undefined') {
+  SVGElement.prototype.focus = () => {};
+}
+
 type InventoryItem = {
   index: number,
   club_penguin_id: number,
