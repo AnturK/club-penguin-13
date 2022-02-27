@@ -19,6 +19,21 @@ export class CpWindow extends Component<CpWindowProps> {
       'can-close': true,
     });
 
+    this.updateGeometry();
+  }
+
+  componentDidUpdate(prevProps) {
+    const shouldUpdateGeometry = (
+      this.props.width !== prevProps.width
+      || this.props.height !== prevProps.height
+    );
+
+    if (shouldUpdateGeometry) {
+      this.updateGeometry();
+    }
+  }
+
+  updateGeometry() {
     recallWindowGeometry({
       size: [this.props.width, this.props.height],
     });

@@ -21,6 +21,7 @@ GLOBAL_LIST_EMPTY(penguins)
 
 	src.name = name
 	src.penguin_color = penguin_color
+	inventory = new
 
 	GLOB.penguins += src
 
@@ -63,10 +64,7 @@ GLOBAL_LIST_EMPTY(penguins)
 	. += penguin_body
 
 	. += image(icon, icon_state = features_state)
-
-	for (var/clothing_type as anything in equipped_clothing)
-		var/datum/club_penguin_clothing/clothing = GLOB.club_penguin_clothing[clothing_type]
-		. += image(clothing.icon, icon_state = item_state)
+	. += inventory.create_penguin_overlays(item_state)
 
 	return .
 

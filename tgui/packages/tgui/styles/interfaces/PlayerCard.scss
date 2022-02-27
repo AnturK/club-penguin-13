@@ -1,0 +1,42 @@
+@use "sass:color";
+
+.PlayerCard {
+  &__inventory-button {
+    background: #00529B;
+    border-radius: 0% 70% 70% 0%;
+    position: absolute;
+    right: -15px;
+    top: 15px;
+    height: 160px;
+    width: 30px;
+
+    transition: color 0ms, background-color 0ms;
+
+    &__inner {
+      background: #0280CD;
+      border-radius: 0% 70% 70% 0%;
+      color: #00529B;
+      position: absolute;
+      height: 105px;
+      width: 100%;
+      left: 0;
+      top: 25px;
+      margin-top: auto;
+      margin-bottom: auto;
+
+      &:after {
+        position: absolute;
+        font-size: 18px;
+        top: 50%;
+        transform: translate(50%, -50%);
+        content: "▶";
+      }
+    }
+
+    &:hover {
+      .PlayerCard__inventory-button__inner {
+        background: color.scale(#00529B, $lightness: 50%);
+      }
+    }
+  }
+}

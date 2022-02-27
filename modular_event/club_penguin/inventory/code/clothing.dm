@@ -19,9 +19,3 @@ GLOBAL_LIST_INIT(club_penguin_clothing, init_club_penguin_clothing())
 	var/icon
 
 	var/slot
-
-/datum/club_penguin_clothing/miners_helmet
-	name = "Miners Helmet"
-	club_penguin_id = 429
-	icon = 'modular_event/club_penguin/clothing/icons/mining_helmet.dmi'
-	slot = CP_CLOTHING_SLOT_HEAD

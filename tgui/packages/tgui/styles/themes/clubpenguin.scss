@@ -1,12 +1,88 @@
 @use 'sass:color';
 @use 'sass:meta';
 
+// Load components here, so we can have total modularity
+@include meta.load-css('../interfaces/PlayerCard.scss');
+
 .theme-clubpenguin {
+  .Button__clubpenguin {
+    background: linear-gradient(120deg, hsl(0, 0%, 70%), hsl(0, 0%, 90%));
+
+    &:hover {
+      background: linear-gradient(120deg, hsl(0, 0%, 80%), hsl(0, 0%, 95%));
+
+      .inner1 {
+        background: linear-gradient(120deg, hsl(0, 0%, 80%), hsl(0, 0%, 90%));
+      }
+    }
+
+    border-radius: 100%;
+    box-shadow: 0px 0px 16px #000;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    height: 46px;
+    width: 46px;
+
+    .inner1 {
+      background: linear-gradient(120deg, hsl(0, 0%, 70%), hsl(0, 0%, 90%));
+      border: 2px solid #666;
+      border-radius: 100%;
+      color: #666;
+      display: inline-block;
+      font-size: 15px;
+      font-weight: bolder;
+      text-align: center;
+      margin-left: -4px;
+      min-height: 42px;
+      min-width: 42px;
+      padding-top: 5px;
+    }
+
+    .inner2 {
+      background: linear-gradient(120deg, #fff, #ccc);
+      border: 2px solid #666;
+      border-radius: 100%;
+      color: #666;
+      display: inline-block;
+      font-size: 20px;
+      font-weight: bolder;
+      padding-top: 2px;
+      text-align: center;
+      vertical-align: middle;
+      height: 28px;
+      width: 28px;
+    }
+  }
+
   .Button__clubpenguin-close {
     background: linear-gradient(120deg, hsl(208, 100%, 30%), hsl(210, 100%, 20%));
 
     &:hover {
       background: linear-gradient(120deg, hsl(208, 100%, 80%), hsl(210, 100%, 35%));
+
+      .inner1 {
+        background: linear-gradient(120deg, #6adfff, #3f95cb);
+      }
+    }
+
+    .inner1 {
+      background: linear-gradient(120deg, #00C1F5, #0280CD);
+      border: 2px solid #083C6E;
+      color: #069;
+    }
+
+    .inner2 {
+      border: 2px solid #083C6E;
+      color: #069;
+    }
+  }
+
+  .Button__white-inverse {
+    background: #fff;
+
+    &:hover {
+      background: #ddd;
     }
   }
 
@@ -14,5 +90,23 @@
     background: #0280CC;
     background-image: none;
     color: #000;
+  }
+}
+
+.PlayerCard__CardAsset-fade {
+  opacity: 1;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 0.2s;
+}
+
+@keyframes fadeInOpacity {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
   }
 }

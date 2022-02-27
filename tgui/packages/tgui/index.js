@@ -8,7 +8,6 @@
 import './styles/main.scss';
 import './styles/themes/abductor.scss';
 import './styles/themes/cardtable.scss';
-import './styles/themes/clubpenguin.scss';
 import './styles/themes/hackerman.scss';
 import './styles/themes/malfunction.scss';
 import './styles/themes/neutral.scss';
@@ -18,6 +17,10 @@ import './styles/themes/retro.scss';
 import './styles/themes/syndicate.scss';
 import './styles/themes/wizard.scss';
 import './styles/themes/admin.scss';
+
+// EVENT EDIT: Import club penguin theme
+import './styles/themes/clubpenguin.scss';
+// END EVENT EDIT
 
 import { perf } from 'common/perf';
 import { setupHotReloading } from 'tgui-dev-server/link/client.cjs';
