@@ -1,4 +1,4 @@
-// HER SIMPLE TRICK SAVES 10-20 SECONDS OF INIT TIME (MAINTAINERS HATE HER)
+// HER SIMPLE TRICK SAVES 90 SECONDS OF INIT TIME (MAINTAINERS HATE HER)
 /datum/controller/subsystem/mapping/Initialize()
 	// Spatial gridmaps need this
 	z_list = list()
