@@ -9,6 +9,3 @@
 	var/turf/corner2
 
 	var/lock_camera = TRUE
-
-/area/club_penguin/demo1
-	name = "Demo1 Room"

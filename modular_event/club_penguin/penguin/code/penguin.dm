@@ -6,6 +6,7 @@ GLOBAL_LIST_EMPTY(penguins)
 	name = "penguin"
 	icon = 'modular_event/club_penguin/penguin/icons/penguin.dmi'
 	appearance_flags = PIXEL_SCALE | TILE_BOUND | KEEP_TOGETHER
+	sight = SEE_TURFS | SEE_MOBS | SEE_OBJS | SEE_SELF
 	living_flags = NONE
 
 	maptext_width = 256
