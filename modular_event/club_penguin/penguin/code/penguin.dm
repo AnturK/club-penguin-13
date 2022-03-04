@@ -9,10 +9,6 @@ GLOBAL_LIST_EMPTY(penguins)
 	sight = SEE_TURFS | SEE_MOBS | SEE_OBJS | SEE_SELF
 	living_flags = NONE
 
-	maptext_width = 256
-	maptext_x = -112
-	maptext_y = -8
-
 	var/animation_state
 	var/penguin_color
 	var/list/equipped_clothing = list(/datum/club_penguin_clothing/miners_helmet)
@@ -27,8 +23,6 @@ GLOBAL_LIST_EMPTY(penguins)
 	GLOB.penguins += src
 
 	update_appearance()
-
-	create_nameplate()
 
 /mob/living/basic/club_penguin/Destroy()
 	GLOB.penguins -= src
@@ -67,7 +61,12 @@ GLOBAL_LIST_EMPTY(penguins)
 	. += image(icon, icon_state = features_state)
 	. += inventory.create_penguin_overlays(item_state)
 
-	return .
+	// Need an image without an icon, and `image()` doesn't work
+	var/image/penguin_name = image(dir = NORTH)
+	penguin_name.maptext_width = 256
+	penguin_name.maptext_x = -112
+	penguin_name.maptext_y = -8
+	penguin_name.maptext = {"<span style="font-family: 'Small Fonts'; font-size: 6px; color: #000; text-align: center">[name]</span>"}
+	. += penguin_name
 
-/mob/living/basic/club_penguin/proc/create_nameplate()
-	maptext = {"<span style="font-family: 'Small Fonts'; font-size: 6px; color: #000; text-align: center">[name]</span>"}
+	return .
