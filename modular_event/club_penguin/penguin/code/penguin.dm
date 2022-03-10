@@ -39,27 +39,35 @@ GLOBAL_LIST_EMPTY(penguins)
 	animation_state = ANIMATION_STATE_DANCE
 	update_appearance(UPDATE_OVERLAYS)
 
+/mob/living/basic/club_penguin/proc/is_dancing()
+	return animation_state == ANIMATION_STATE_DANCE
+
 /mob/living/basic/club_penguin/update_overlays()
 	. = ..()
 
-	var/body_state = "penguin_body"
-	var/features_state = "penguin_features"
-	var/item_state = "item"
+	if (should_be_drilling())
+		create_drilling_overlays()
+	else
+		clear_drilling_overlays()
 
-	// CP TODO: Throwing snowballs can't be a flick, since they can move to cancel it.
-	// Change the dmi export to be a 0-loop animation
-	switch (animation_state)
-		if (ANIMATION_STATE_DANCE)
-			body_state = "dance_body"
-			features_state = "dance_features"
-			item_state = "dance"
+		var/body_state = "penguin_body"
+		var/features_state = "penguin_features"
+		var/item_state = "item"
 
-	var/image/penguin_body = image(icon, icon_state = body_state)
-	penguin_body.color = penguin_color
-	. += penguin_body
+		// CP TODO: Throwing snowballs can't be a flick, since they can move to cancel it.
+		// Change the dmi export to be a 0-loop animation
+		switch (animation_state)
+			if (ANIMATION_STATE_DANCE)
+				body_state = "dance_body"
+				features_state = "dance_features"
+				item_state = "dance"
 
-	. += image(icon, icon_state = features_state)
-	. += inventory.create_penguin_overlays(item_state)
+		var/image/penguin_body = image(icon, icon_state = body_state)
+		penguin_body.color = penguin_color
+		. += penguin_body
+
+		. += image(icon, icon_state = features_state)
+		. += inventory.create_penguin_overlays(item_state)
 
 	// Need an image without an icon, and `image()` doesn't work
 	var/image/penguin_name = image(dir = NORTH)
