@@ -9,10 +9,6 @@
 "o" = (
 /turf/cordon,
 /area/club_penguin/iceberg)
-"w" = (
-/obj/effect/landmark/observer_start,
-/turf/open/floor/iron/white,
-/area/club_penguin/iceberg)
 "K" = (
 /obj/effect/backdrop/iceberg,
 /obj/effect/landmark/club_penguin_corner1,
@@ -218,7 +214,7 @@ a
 a
 a
 a
-w
+a
 a
 a
 a
