@@ -31,7 +31,6 @@
 /obj/effect/overlay/drilling
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
 	anchored = TRUE
-	// layer = ABOVE_MOB_LAYER
 	appearance_flags = KEEP_APART
 	vis_flags = VIS_INHERIT_PLANE | VIS_INHERIT_LAYER
 

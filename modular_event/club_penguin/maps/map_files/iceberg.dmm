@@ -2,6 +2,10 @@
 "a" = (
 /turf/open/floor/iron/white,
 /area/club_penguin/iceberg)
+"g" = (
+/obj/effect/landmark/area_ambience/iceberg,
+/turf/cordon,
+/area/club_penguin/iceberg)
 "o" = (
 /turf/cordon,
 /area/club_penguin/iceberg)
@@ -51,7 +55,7 @@ o
 o
 o
 o
-o
+g
 "}
 (3,1,1) = {"
 o

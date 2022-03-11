@@ -24,4 +24,10 @@
 		var/obj/effect/landmark/observer_start/backup = locate() in GLOB.landmarks_list
 		chosen_turf = get_turf(backup)
 
-	return new /mob/living/basic/club_penguin(chosen_turf, name, penguin_color)
+	var/mob/living/basic/club_penguin/penguin = new(chosen_turf, name, penguin_color)
+	. = penguin
+
+	var/area/penguin_area = get_area(penguin)
+	penguin_area.Entered(penguin, null)
+
+	return .

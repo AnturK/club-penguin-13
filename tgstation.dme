@@ -4312,6 +4312,7 @@
 #include "modular_event\club_penguin\inventory\code\clothing.dm"
 #include "modular_event\club_penguin\inventory\code\inventory.dm"
 #include "modular_event\club_penguin\inventory\code\ui.dm"
+#include "modular_event\club_penguin\mapping\ambience.dm"
 #include "modular_event\club_penguin\mapping\areas.dm"
 #include "modular_event\club_penguin\mapping\backdrop.dm"
 #include "modular_event\club_penguin\mapping\block_old_mapping.dm"
