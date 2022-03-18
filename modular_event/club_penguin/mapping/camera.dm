@@ -10,7 +10,6 @@
 	if (!isnull(arrived_client))
 		arrived_client?.perspective = EDGE_PERSPECTIVE
 		arrived_client?.edge_limit = "[corner1.x],[corner1.y] to [corner2.x],[corner2.y]"
-		arrived_client?.view_size?.setBoth(corner2.x - corner1.x, corner2.y - corner1.y)
 
 		// Everything in view sizes is done as *offsets* of the default. Weird, huh?
 		arrived_client?.view_size?.setDefault("[corner2.x - corner1.x + 1]x[corner2.y - corner1.y + 1]")
