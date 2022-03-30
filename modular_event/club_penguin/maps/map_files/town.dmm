@@ -3,10 +3,6 @@
 /obj/effect/landmark/club_penguin_corner2,
 /turf/cordon,
 /area/club_penguin/town)
-"n" = (
-/obj/effect/landmark/observer_start,
-/turf/open/floor/grass/snow/actually_safe,
-/area/club_penguin/town)
 "r" = (
 /obj/effect/backdrop/town,
 /obj/effect/landmark/club_penguin_corner1,
@@ -177,7 +173,7 @@ V
 F
 F
 F
-n
+F
 F
 F
 F
