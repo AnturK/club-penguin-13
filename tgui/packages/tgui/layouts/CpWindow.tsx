@@ -6,6 +6,7 @@ import { Layout } from "./Layout";
 type CpWindowProps = {
   height: number,
   width: number,
+  layoutProps?: CSSProperties,
 };
 
 export class CpWindow extends Component<CpWindowProps> {
@@ -48,7 +49,7 @@ export class CpWindow extends Component<CpWindowProps> {
         theme="clubpenguin"
         onMouseDown={dragStartHandler}
       >
-        <Layout.Content>
+        <Layout.Content style={this.props.layoutProps}>
           {!suspended && this.props.children}
         </Layout.Content>
       </Layout>
