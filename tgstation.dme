@@ -4319,6 +4319,8 @@
 #include "modular_event\club_penguin\mapping\camera.dm"
 #include "modular_event\club_penguin\mapping\cordons.dm"
 #include "modular_event\club_penguin\mapping\replace_with_maps.dm"
+#include "modular_event\club_penguin\mapping\teleport_to.dm"
+#include "modular_event\club_penguin\mapping\teleport_transition.dm"
 #include "modular_event\club_penguin\maps\code\iceberg.dm"
 #include "modular_event\club_penguin\maps\code\maps.dm"
 #include "modular_event\club_penguin\maps\code\town.dm"

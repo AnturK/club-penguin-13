@@ -9,16 +9,7 @@
 	var/chosen_turf
 
 	if (best_areas.len)
-		var/area = pick(best_areas)
-
-		var/list/open_turfs = list()
-
-		for (var/turf/open/open_turf in area)
-			if (open_turf.is_blocked_turf(exclude_mobs = TRUE))
-				open_turfs += open_turf
-
-		if (open_turfs.len)
-			chosen_turf = pick(open_turfs)
+		chosen_turf = get_safe_turf_in_area(pick(best_areas))
 
 	if (isnull(chosen_turf))
 		var/obj/effect/landmark/observer_start/backup = locate() in GLOB.landmarks_list

@@ -1,4 +1,5 @@
 /area/club_penguin
+	area_flags = UNIQUE_AREA
 	requires_power = FALSE
 	has_gravity = TRUE
 

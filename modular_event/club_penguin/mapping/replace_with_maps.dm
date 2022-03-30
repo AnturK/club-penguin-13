@@ -3,7 +3,7 @@ SUBSYSTEM_DEF(cp_mapping)
 	init_order = INIT_ORDER_MAPPING
 	flags = SS_NO_FIRE
 
-	var/list/map_levels
+	var/list/datum/space_level/map_levels
 
 /datum/controller/subsystem/cp_mapping/Initialize(start_timeofday)
 	map_levels = list()
