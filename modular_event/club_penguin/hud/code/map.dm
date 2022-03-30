@@ -1,9 +1,18 @@
 GLOBAL_DATUM_INIT(club_penguin_map_ui, /datum/club_penguin_map_ui, new)
 
-/mob/verb/open_map()
-	set category = "TEST"
-	set name = "Open Map"
+/atom/movable/screen/club_penguin_hud_button/map
+	name = "map"
+	icon_state = "map"
+	screen_loc = "SOUTH:10,WEST:10"
+
+/atom/movable/screen/club_penguin_hud_button/map/Click(location, control, params)
 	GLOB.club_penguin_map_ui.ui_interact(usr)
+
+/atom/movable/screen/club_penguin_hud_button/map/MouseEntered(location, control, params)
+	icon_state = "map_open"
+
+/atom/movable/screen/club_penguin_hud_button/map/MouseExited(location, control, params)
+	icon_state = "map"
 
 /datum/club_penguin_map_ui
 

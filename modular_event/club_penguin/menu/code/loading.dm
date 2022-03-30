@@ -13,11 +13,13 @@
 	mob.overlay_club_penguin_background("loading")
 
 	RegisterSignal(mob, COMSIG_MOB_LOGIN, .proc/on_mob_login)
+	SEND_SIGNAL(mob, COMSIG_MOB_CLUB_PENGUIN_LOADING_SCREEN_STARTED)
 
 /datum/club_penguin_loading_screen/Destroy(force, ...)
 	mob.clear_fullscreen("loading", animated = FALSE)
 	mob.client?.screen -= loading_image
 	QDEL_NULL(loading_image)
+	SEND_SIGNAL(mob, COMSIG_MOB_CLUB_PENGUIN_LOADING_SCREEN_STOPPED)
 
 	return ..()
 

@@ -8,6 +8,7 @@ GLOBAL_LIST_EMPTY(penguins)
 	appearance_flags = PIXEL_SCALE | TILE_BOUND | KEEP_TOGETHER
 	sight = SEE_TURFS | SEE_MOBS | SEE_OBJS | SEE_SELF
 	living_flags = NONE
+	hud_type = /datum/hud/club_penguin
 
 	var/animation_state
 	var/penguin_color

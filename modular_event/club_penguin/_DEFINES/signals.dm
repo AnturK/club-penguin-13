@@ -1,0 +1,2 @@
+#define COMSIG_MOB_CLUB_PENGUIN_LOADING_SCREEN_STARTED "mob_club_penguin_loading_screen_started"
+#define COMSIG_MOB_CLUB_PENGUIN_LOADING_SCREEN_STOPPED "mob_club_penguin_loading_screen_stopped"
