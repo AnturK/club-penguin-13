@@ -7,10 +7,6 @@
 "h" = (
 /turf/cordon,
 /area/club_penguin/beach)
-"k" = (
-/obj/effect/landmark/observer_start,
-/turf/open/floor/grass/snow/actually_safe,
-/area/club_penguin/beach)
 "n" = (
 /obj/effect/landmark/club_penguin_corner2,
 /turf/cordon,
@@ -174,7 +170,7 @@ Y
 Y
 Y
 Y
-k
+Y
 Y
 Y
 Y
