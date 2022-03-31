@@ -1,39 +1,35 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
-"a" = (
+"i" = (
 /obj/effect/landmark/club_penguin_corner2,
 /turf/cordon,
-/area/club_penguin/town)
-"e" = (
-/obj/effect/teleport_transition{
-	club_penguin_area_type = /area/club_penguin/coffee_shop
-	},
-/turf/open/floor/grass/snow/actually_safe,
-/area/club_penguin/town)
-"g" = (
-/obj/effect/teleport_transition{
-	club_penguin_area_type = /area/club_penguin/plaza
-	},
-/turf/open/floor/grass/snow/actually_safe,
-/area/club_penguin/town)
-"r" = (
-/obj/effect/backdrop/town,
-/obj/effect/landmark/club_penguin_corner1,
-/turf/cordon,
-/area/club_penguin/town)
-"s" = (
-/obj/effect/landmark/observer_start,
-/turf/open/floor/grass/snow/actually_safe,
-/area/club_penguin/town)
+/area/club_penguin/plaza)
 "w" = (
-/obj/effect/landmark/area_ambience/town,
+/obj/effect/landmark/club_penguin_corner1,
+/obj/effect/backdrop/plaza,
 /turf/cordon,
-/area/club_penguin/town)
+/area/club_penguin/plaza)
 "F" = (
 /turf/open/floor/grass/snow/actually_safe,
-/area/club_penguin/town)
+/area/club_penguin/plaza)
+"L" = (
+/obj/effect/teleport_transition{
+	club_penguin_area_type = /area/club_penguin/cove
+	},
+/turf/open/floor/grass/snow/actually_safe,
+/area/club_penguin/plaza)
+"P" = (
+/obj/effect/landmark/area_ambience/plaza,
+/turf/cordon,
+/area/club_penguin/plaza)
 "V" = (
 /turf/cordon,
-/area/club_penguin/town)
+/area/club_penguin/plaza)
+"X" = (
+/obj/effect/teleport_transition{
+	club_penguin_area_type = /area/club_penguin/town
+	},
+/turf/open/floor/grass/snow/actually_safe,
+/area/club_penguin/plaza)
 
 (1,1,1) = {"
 V
@@ -50,7 +46,7 @@ V
 V
 V
 V
-r
+V
 V
 "}
 (2,1,1) = {"
@@ -60,11 +56,11 @@ V
 V
 V
 V
-V
-V
-V
-e
+X
 F
+F
+V
+V
 V
 V
 V
@@ -80,13 +76,13 @@ V
 V
 V
 V
-V
 F
 F
-F
 V
 V
 V
+V
+P
 V
 "}
 (4,1,1) = {"
@@ -102,9 +98,9 @@ F
 F
 F
 F
-F
-F
 V
+V
+F
 V
 "}
 (5,1,1) = {"
@@ -115,14 +111,14 @@ V
 V
 V
 V
-F
 V
 F
 F
 F
 F
 F
-V
+F
+F
 V
 "}
 (6,1,1) = {"
@@ -134,12 +130,12 @@ V
 V
 V
 V
+F
+F
+F
+F
 V
-F
-F
-F
-F
-F
+V
 F
 V
 "}
@@ -151,13 +147,13 @@ V
 V
 V
 V
-e
+V
 F
 F
 F
 F
-F
-F
+V
+V
 F
 V
 "}
@@ -169,7 +165,7 @@ V
 V
 V
 V
-F
+V
 F
 F
 F
@@ -186,7 +182,7 @@ V
 V
 V
 V
-F
+V
 F
 F
 F
@@ -204,10 +200,10 @@ V
 V
 V
 V
+V
+V
 F
 F
-F
-s
 F
 F
 F
@@ -222,14 +218,14 @@ V
 V
 V
 V
+V
 F
 F
 F
 F
 F
 F
-F
-F
+V
 F
 V
 "}
@@ -240,14 +236,14 @@ V
 V
 V
 V
+V
+V
 F
 F
 F
 F
-F
-F
-F
-F
+V
+V
 F
 V
 "}
@@ -258,14 +254,14 @@ V
 V
 V
 V
+F
 V
 F
 F
 F
 F
-F
-F
-F
+V
+V
 F
 V
 "}
@@ -276,14 +272,14 @@ V
 V
 V
 V
+F
+F
+F
+F
+F
+F
 V
-F
-F
-F
-F
-F
-F
-F
+V
 F
 V
 "}
@@ -314,13 +310,13 @@ V
 V
 V
 V
-V
-V
 F
 F
 F
 F
-V
+F
+F
+F
 V
 "}
 (17,1,1) = {"
@@ -331,14 +327,14 @@ V
 V
 V
 V
-V
-V
-V
 F
 F
 F
 F
-V
+F
+F
+F
+F
 V
 "}
 (18,1,1) = {"
@@ -351,16 +347,15 @@ V
 V
 V
 V
-V
-F
 F
 F
 V
+V
+F
 V
 V
 "}
 (19,1,1) = {"
-a
 V
 V
 V
@@ -370,14 +365,33 @@ V
 V
 V
 V
-g
+F
 F
 V
+F
 V
 V
 V
 "}
 (20,1,1) = {"
+i
+V
+V
+V
+V
+V
+V
+V
+V
+L
+F
+V
+F
+V
+V
+V
+"}
+(21,1,1) = {"
 V
 V
 V
