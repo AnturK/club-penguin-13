@@ -4309,6 +4309,8 @@
 #include "modular_event\base\station_traits.dm"
 #include "modular_event\club_penguin\_DEFINES\clothing.dm"
 #include "modular_event\club_penguin\_DEFINES\signals.dm"
+#include "modular_event\club_penguin\hud\code\actions_hud.dm"
+#include "modular_event\club_penguin\hud\code\bottom_hud.dm"
 #include "modular_event\club_penguin\hud\code\hud.dm"
 #include "modular_event\club_penguin\hud\code\hud_button.dm"
 #include "modular_event\club_penguin\hud\code\map.dm"
