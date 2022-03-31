@@ -5,7 +5,7 @@
 	icon = 'modular_event/club_penguin/maps/icons/plaza.dmi'
 
 /obj/effect/landmark/area_ambience/plaza
-	ambience_to_play = 'modular_event/club_penguin/maps/sound/ski_village_ambience.mp3'
+	ambience_to_play = 'modular_event/club_penguin/maps/sound/ski_village_ambience.ogg'
 
 /datum/map_template/club_penguin_map/plaza
 	name = "Plaza"

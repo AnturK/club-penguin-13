@@ -5,7 +5,7 @@
 	icon = 'modular_event/club_penguin/maps/icons/cove.dmi'
 
 /obj/effect/landmark/area_ambience/cove
-	ambience_to_play = 'modular_event/club_penguin/maps/sound/cove_ambience.mp3'
+	ambience_to_play = 'modular_event/club_penguin/maps/sound/cove_ambience.ogg'
 
 /datum/map_template/club_penguin_map/cove
 	name = "Cove"

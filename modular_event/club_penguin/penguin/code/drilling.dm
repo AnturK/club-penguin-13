@@ -4,8 +4,8 @@
 
 /mob/living/basic/club_penguin/proc/should_be_drilling()
 	return is_dancing() \
-		&& equipped_clothing.len == 1 \
-		&& equipped_clothing[1] == /datum/club_penguin_clothing/miners_helmet
+		&& inventory.equipped_clothing.len == 1 \
+		&& inventory.equipped_clothing[1] == /datum/club_penguin_clothing/miners_helmet
 
 /mob/living/basic/club_penguin/proc/create_drilling_overlays()
 	if (!isnull(drilling_vis_contents))

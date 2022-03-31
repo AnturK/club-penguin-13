@@ -12,7 +12,6 @@ GLOBAL_LIST_EMPTY(penguins)
 
 	var/animation_state
 	var/penguin_color
-	var/list/equipped_clothing = list(/datum/club_penguin_clothing/miners_helmet)
 
 /mob/living/basic/club_penguin/Initialize(mapload, name = "penguin", penguin_color = "#ff0000")
 	. = ..()
