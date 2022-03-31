@@ -5,7 +5,7 @@
 	icon = 'modular_event/club_penguin/maps/icons/gift_shop.dmi'
 
 /obj/effect/landmark/area_ambience/gift_shop
-	ambience_to_play = 'modular_event/club_penguin/maps/sound/town_ambience.mp3'
+	ambience_to_play = 'modular_event/club_penguin/maps/sound/gift_shop_ambience.mp3'
 
 /datum/map_template/club_penguin_map/gift_shop
 	name = "Gift Shop"

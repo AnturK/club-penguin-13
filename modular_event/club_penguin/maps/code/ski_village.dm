@@ -5,7 +5,7 @@
 	icon = 'modular_event/club_penguin/maps/icons/ski_village.dmi'
 
 /obj/effect/landmark/area_ambience/ski_village
-	ambience_to_play = 'modular_event/club_penguin/maps/sound/town_ambience.mp3'
+	ambience_to_play = 'modular_event/club_penguin/maps/sound/ski_village_ambience.mp3'
 
 /datum/map_template/club_penguin_map/ski_village
 	name = "Ski Village"

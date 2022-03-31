@@ -5,7 +5,7 @@
 	icon = 'modular_event/club_penguin/maps/icons/beach.dmi'
 
 /obj/effect/landmark/area_ambience/beach
-	ambience_to_play = 'modular_event/club_penguin/maps/sound/town_ambience.mp3'
+	ambience_to_play = 'modular_event/club_penguin/maps/sound/ski_village_ambience.mp3'
 
 /datum/map_template/club_penguin_map/beach
 	name = "Beach"
