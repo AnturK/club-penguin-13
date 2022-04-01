@@ -13,6 +13,15 @@
 "D" = (
 /obj/effect/landmark/club_penguin_corner1,
 /obj/effect/backdrop/ski_village,
+/obj/effect/teleport_transition{
+	club_penguin_area_type = /area/club_penguin/beach
+	},
+/turf/open/floor/grass/snow/actually_safe,
+/area/club_penguin/ski_village)
+"H" = (
+/obj/effect/teleport_transition{
+	club_penguin_area_type = /area/club_penguin/beach
+	},
 /turf/open/floor/grass/snow/actually_safe,
 /area/club_penguin/ski_village)
 "T" = (
@@ -50,8 +59,8 @@ a
 a
 a
 a
-T
-T
+H
+H
 D
 a
 "}
@@ -188,7 +197,7 @@ a
 a
 a
 a
-a
+T
 T
 T
 T
@@ -206,7 +215,7 @@ a
 a
 a
 a
-a
+T
 T
 T
 T
@@ -224,7 +233,7 @@ a
 a
 a
 a
-a
+T
 T
 T
 T
@@ -242,7 +251,7 @@ a
 a
 a
 a
-a
+T
 T
 T
 T
@@ -260,7 +269,7 @@ a
 a
 a
 a
-a
+T
 T
 T
 T
@@ -374,9 +383,9 @@ a
 a
 T
 T
-T
-T
-T
+H
+H
+H
 a
 "}
 (21,1,1) = {"

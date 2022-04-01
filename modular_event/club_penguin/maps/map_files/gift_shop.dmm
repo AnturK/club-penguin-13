@@ -1,4 +1,10 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"k" = (
+/obj/effect/teleport_transition{
+	club_penguin_area_type = /area/club_penguin/town
+	},
+/turf/open/floor/grass/snow/actually_safe,
+/area/club_penguin/gift_shop)
 "q" = (
 /turf/open/floor/grass/snow/actually_safe,
 /area/club_penguin/gift_shop)
@@ -256,11 +262,11 @@ N
 (14,1,1) = {"
 N
 N
-q
-q
-q
-q
-q
+N
+N
+N
+N
+k
 q
 q
 q
@@ -274,11 +280,11 @@ N
 (15,1,1) = {"
 N
 N
-q
-q
-q
-q
-q
+N
+N
+N
+N
+k
 q
 q
 q

@@ -15,6 +15,10 @@
 /obj/effect/landmark/club_penguin_corner2,
 /turf/cordon,
 /area/club_penguin/pizza_parlor)
+"P" = (
+/obj/effect/teleport_transition,
+/turf/open/floor/grass/snow/actually_safe,
+/area/club_penguin/pizza_parlor)
 "Z" = (
 /turf/open/floor/grass/snow/actually_safe,
 /area/club_penguin/pizza_parlor)
@@ -237,11 +241,11 @@ a
 "}
 (13,1,1) = {"
 a
-Z
-Z
-Z
-Z
-Z
+a
+a
+a
+a
+P
 Z
 Z
 Z
@@ -255,11 +259,11 @@ a
 "}
 (14,1,1) = {"
 a
-Z
-Z
-Z
-Z
-Z
+a
+a
+a
+a
+P
 Z
 Z
 Z
@@ -273,11 +277,11 @@ a
 "}
 (15,1,1) = {"
 a
-Z
-Z
-Z
-Z
-Z
+a
+a
+a
+a
+P
 Z
 Z
 Z

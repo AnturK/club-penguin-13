@@ -11,6 +11,12 @@
 /obj/effect/landmark/club_penguin_corner2,
 /turf/cordon,
 /area/club_penguin/beach)
+"s" = (
+/obj/effect/teleport_transition{
+	club_penguin_area_type = /area/club_penguin/ski_village
+	},
+/turf/open/floor/grass/snow/actually_safe,
+/area/club_penguin/beach)
 "v" = (
 /obj/effect/teleport_transition{
 	club_penguin_area_type = /area/club_penguin/town
@@ -216,7 +222,7 @@ h
 h
 h
 h
-Y
+s
 Y
 Y
 Y
@@ -233,7 +239,7 @@ h
 h
 h
 h
-Y
+s
 Y
 Y
 Y
@@ -250,7 +256,7 @@ h
 h
 h
 h
-Y
+s
 Y
 h
 Y

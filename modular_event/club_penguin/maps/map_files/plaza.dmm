@@ -11,6 +11,12 @@
 "F" = (
 /turf/open/floor/grass/snow/actually_safe,
 /area/club_penguin/plaza)
+"H" = (
+/obj/effect/teleport_transition{
+	club_penguin_area_type = /area/club_penguin/pizza_parlor
+	},
+/turf/open/floor/grass/snow/actually_safe,
+/area/club_penguin/plaza)
 "L" = (
 /obj/effect/teleport_transition{
 	club_penguin_area_type = /area/club_penguin/cove
@@ -237,7 +243,7 @@ V
 V
 V
 V
-V
+F
 F
 F
 F
@@ -255,7 +261,7 @@ V
 V
 V
 F
-V
+F
 F
 F
 F
@@ -308,8 +314,8 @@ V
 V
 V
 V
-V
-V
+H
+F
 F
 F
 F
@@ -326,7 +332,7 @@ V
 V
 V
 V
-V
+H
 F
 F
 F
