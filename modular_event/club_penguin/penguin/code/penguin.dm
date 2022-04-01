@@ -78,3 +78,18 @@ GLOBAL_LIST_EMPTY(penguins)
 	. += penguin_name
 
 	return .
+
+
+/mob/living/basic/club_penguin/proc/joke()
+	var/static/joke_list = json_decode(file2text('modular_event/club_penguin/penguin/code/jokes.json'))
+
+	var/list/joke = pick(joke_list)
+
+	var/setup = joke[1]
+	var/delivery = joke[2]
+
+	say(setup, forced = "penguin joke")
+	addtimer(CALLBACK(src, .proc/finish_joke, delivery), 3 SECONDS)
+
+/mob/living/basic/club_penguin/proc/finish_joke(joke)
+	say(joke, forced = "penguin joke")
