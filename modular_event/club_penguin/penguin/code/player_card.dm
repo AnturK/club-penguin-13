@@ -4,7 +4,7 @@
 /mob/living/basic/club_penguin/Click(location, control, params)
 	var/list/modifiers = params2list(params)
 
-	if (!LAZYACCESS(modifiers, LEFT_CLICK))
+	if (!LAZYACCESS(modifiers, LEFT_CLICK) || LAZYACCESS(modifiers, CTRL_CLICK))
 		return ..()
 
 	ui_interact(usr)

@@ -18,6 +18,10 @@
 	if (creating_penguin)
 		return
 
+	if (Master.current_runlevel < RUNLEVEL_LOBBY)
+		to_chat(usr, span_warning("The game isn't ready yet!"))
+		return
+
 	creating_penguin = TRUE
 	create_penguin_menu()
 	creating_penguin = FALSE

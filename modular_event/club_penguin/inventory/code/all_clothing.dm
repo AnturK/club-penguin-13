@@ -249,3 +249,9 @@
 	club_penguin_id = 429
 	icon = 'modular_event/club_penguin/inventory/icons/429.dmi'
 	slot = "6000"
+
+/datum/club_penguin_clothing/kitty_kat_hat
+	name = "Kitty Kat Hat"
+	club_penguin_id = 11031
+	icon = 'modular_event/club_penguin/inventory/icons/11031.dmi'
+	slot = 6000
