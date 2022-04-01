@@ -4340,6 +4340,7 @@
 #include "modular_event\club_penguin\maps\code\town.dm"
 #include "modular_event\club_penguin\menu\code\home.dm"
 #include "modular_event\club_penguin\menu\code\loading.dm"
+#include "modular_event\club_penguin\menu\code\no_title_screen.dm"
 #include "modular_event\club_penguin\menu\code\screen_objects.dm"
 #include "modular_event\club_penguin\penguin\code\create_penguin.dm"
 #include "modular_event\club_penguin\penguin\code\drilling.dm"

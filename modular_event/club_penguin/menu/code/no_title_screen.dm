@@ -1,0 +1,2 @@
+/client/playtitlemusic(vol)
+	return
