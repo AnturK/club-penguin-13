@@ -33,7 +33,7 @@
 		last_user = null
 
 /atom/movable/screen/club_penguin_hud_button/bottom/actions/proc/clear_action_buttons(mob/user)
-	user.client.screen -= action_buttons
+	user?.client.screen -= action_buttons
 	QDEL_LIST(action_buttons)
 	action_buttons = null
 
