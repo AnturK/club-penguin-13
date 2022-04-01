@@ -53,4 +53,4 @@
 	)
 
 	if (prob(40) && phrases.len > 0)
-		addtimer(CALLBACK(src, /atom/movable/proc/say, pick_n_take(phrases), 30), rand(1 SECONDS, 5 SECONDS))
+		addtimer(CALLBACK(src, /atom/movable/proc/say, pick_n_take(phrases), 30), rand(4 SECONDS, 9 SECONDS))

@@ -4312,6 +4312,7 @@
 #include "modular_event\club_penguin\_DEFINES\signals.dm"
 #include "modular_event\club_penguin\black_space\code\space.dm"
 #include "modular_event\club_penguin\finale\code\_DEFINES.dm"
+#include "modular_event\club_penguin\finale\code\credits.dm"
 #include "modular_event\club_penguin\finale\code\finale_controller.dm"
 #include "modular_event\club_penguin\finale\code\iceberg_cracking.dm"
 #include "modular_event\club_penguin\finale\code\npcs.dm"

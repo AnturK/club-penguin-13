@@ -87,10 +87,7 @@ SUBSYSTEM_DEF(club_penguin_finale)
 	SEND_SOUND(world, sound('sound/ai/default/attention.ogg'))
 	to_chat(world, span_notice("<span style='font-size: 16px'>UHHHHH</span>"))
 	stoplag(8 SECONDS)
-
-	for (var/mob/living/mob as anything in GLOB.penguins)
-		mob.dust()
-
+	dust_all_penguins()
 	stoplag(3 SECONDS)
 	to_chat(world, span_notice("<span style='font-size: 16px'>oop</span>"))
 	stoplag(2 SECONDS)
@@ -115,3 +112,7 @@ SUBSYSTEM_DEF(club_penguin_finale)
 		return
 
 	SSexplosions.shake_the_room(get_turf(penguin), near_distance = 30, far_distance = 30, creaking = FALSE)
+
+/datum/controller/subsystem/club_penguin_finale/proc/dust_all_penguins()
+	for (var/mob/living/mob as anything in GLOB.penguins)
+		mob.dust()
