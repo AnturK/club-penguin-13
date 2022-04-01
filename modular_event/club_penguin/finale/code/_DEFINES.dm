@@ -1,0 +1,1 @@
+#define COMSIG_GLOB_CLUB_PENGUIN_FINALE_PROGRESSION "!club_penguin_finale_progression"

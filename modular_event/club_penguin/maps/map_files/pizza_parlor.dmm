@@ -16,7 +16,9 @@
 /turf/cordon,
 /area/club_penguin/pizza_parlor)
 "P" = (
-/obj/effect/teleport_transition,
+/obj/effect/teleport_transition{
+	club_penguin_area_type = /area/club_penguin/plaza
+	},
 /turf/open/floor/grass/snow/actually_safe,
 /area/club_penguin/pizza_parlor)
 "Z" = (

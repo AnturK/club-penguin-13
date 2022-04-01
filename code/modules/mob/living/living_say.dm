@@ -190,8 +190,8 @@ GLOBAL_LIST_INIT(message_modes_stat_limits, list(
 			to_chat(src, span_warning("You find yourself unable to speak!"))
 			return
 
-	var/message_range = 7
-
+	// EVENT EDIT: We need some pretty huge range.
+	var/message_range = 30
 	var/succumbed = FALSE
 
 	// If there's a custom say emote it gets logged differently.

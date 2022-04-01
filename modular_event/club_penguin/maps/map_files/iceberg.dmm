@@ -1,6 +1,6 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "a" = (
-/turf/open/floor/iron/white,
+/turf/open/floor/grass/snow/actually_safe,
 /area/club_penguin/iceberg)
 "g" = (
 /obj/effect/landmark/area_ambience/iceberg,
@@ -12,6 +12,7 @@
 "K" = (
 /obj/effect/backdrop/iceberg,
 /obj/effect/landmark/club_penguin_corner1,
+/obj/effect/iceberg_cracking,
 /turf/cordon,
 /area/club_penguin/iceberg)
 "L" = (
@@ -139,7 +140,7 @@ o
 o
 "}
 (8,1,1) = {"
-a
+o
 a
 a
 a
@@ -156,7 +157,7 @@ o
 o
 "}
 (9,1,1) = {"
-a
+o
 a
 a
 a

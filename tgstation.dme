@@ -4310,6 +4310,10 @@
 #include "modular_event\base\station_traits.dm"
 #include "modular_event\club_penguin\_DEFINES\clothing.dm"
 #include "modular_event\club_penguin\_DEFINES\signals.dm"
+#include "modular_event\club_penguin\finale\code\_DEFINES.dm"
+#include "modular_event\club_penguin\finale\code\finale_controller.dm"
+#include "modular_event\club_penguin\finale\code\iceberg_cracking.dm"
+#include "modular_event\club_penguin\finale\code\npcs.dm"
 #include "modular_event\club_penguin\hud\code\actions_hud.dm"
 #include "modular_event\club_penguin\hud\code\bottom_hud.dm"
 #include "modular_event\club_penguin\hud\code\hud.dm"
@@ -4347,5 +4351,5 @@
 #include "modular_event\club_penguin\penguin\code\drilling.dm"
 #include "modular_event\club_penguin\penguin\code\penguin.dm"
 #include "modular_event\club_penguin\penguin\code\player_card.dm"
-#include "modular_event\club_penguin\ticket\ticker.dm"
+#include "modular_event\club_penguin\ticker\ticker.dm"
 // END_INCLUDE

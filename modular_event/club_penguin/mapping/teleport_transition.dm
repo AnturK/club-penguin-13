@@ -14,7 +14,7 @@
 	RegisterSignal(turf, COMSIG_ATOM_ENTERED, .proc/on_atom_entered)
 
 	if (!(club_penguin_area_type in GLOB.areas_by_type))
-		CRASH("[club_penguin_area_type] is not a UNIQUE_AREA!")
+		CRASH("[club_penguin_area_type] is not a UNIQUE_AREA! Teleporter transition was found in [turf.loc]")
 
 /obj/effect/teleport_transition/proc/on_atom_entered(turf/source, atom/movable/entered)
 	SIGNAL_HANDLER
