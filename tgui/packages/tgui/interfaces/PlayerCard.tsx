@@ -42,7 +42,8 @@ const cardAssetFromId = (id: number) => {
 };
 
 const inventoryAssetFromId = (id: number) => {
-  return `https://icer.ink/media1.clubpenguin.com/avatar/icon/600/${id}.png`;
+  // return `https://icer.ink/media1.clubpenguin.com/avatar/icon/600/${id}.png`;
+  return `https://play.cprewritten.net/assets/content/global/clothing//icons/${id}@3x-0.png`;
 };
 
 const CardAsset = (props: {

@@ -3,7 +3,11 @@
 
 /datum/club_penguin_inventory
 	var/list/equipped_clothing = list()
-	var/list/owned_items = list(/datum/club_penguin_clothing/miners_helmet)
+	var/list/owned_items = list()
+
+/datum/club_penguin_inventory/New()
+	. = ..()
+	owned_items = subtypesof(/datum/club_penguin_clothing)
 
 /datum/club_penguin_inventory/proc/create_penguin_overlays(item_state)
 	var/list/overlays = list()

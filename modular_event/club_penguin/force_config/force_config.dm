@@ -2,4 +2,6 @@
 	. = ..()
 
 	if (filename == "config.txt")
-		LoadEntries("strings/force_config.txt")
+		directory = "strings"
+		LoadEntries("force_config.txt")
+		directory = "config"

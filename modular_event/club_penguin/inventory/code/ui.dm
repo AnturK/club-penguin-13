@@ -14,9 +14,9 @@
 		)
 
 		if (clothing_slot in items_by_slot)
-			items_by_slot[clothing_slot] += clothing_data
+			items_by_slot[clothing_slot] += list(clothing_data)
 		else
-			items_by_slot[clothing_slot] = clothing_data
+			items_by_slot[clothing_slot] = list(clothing_data)
 
 	return items_by_slot
 
