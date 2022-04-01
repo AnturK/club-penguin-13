@@ -5,7 +5,7 @@
 /area/club_penguin/town)
 "e" = (
 /obj/effect/teleport_transition{
-	club_penguin_area_type = /area/club_penguin/coffee_shop
+	club_penguin_area_type = /area/club_penguin/beach
 	},
 /turf/open/floor/grass/snow/actually_safe,
 /area/club_penguin/town)
@@ -28,7 +28,25 @@
 /obj/effect/landmark/area_ambience/town,
 /turf/cordon,
 /area/club_penguin/town)
+"E" = (
+/obj/effect/teleport_transition{
+	club_penguin_area_type = /area/club_penguin/night_club
+	},
+/turf/open/floor/grass/snow/actually_safe,
+/area/club_penguin/town)
 "F" = (
+/turf/open/floor/grass/snow/actually_safe,
+/area/club_penguin/town)
+"K" = (
+/obj/effect/teleport_transition{
+	club_penguin_area_type = /area/club_penguin/gift_shop
+	},
+/turf/open/floor/grass/snow/actually_safe,
+/area/club_penguin/town)
+"N" = (
+/obj/effect/teleport_transition{
+	club_penguin_area_type = /area/club_penguin/coffee_shop
+	},
 /turf/open/floor/grass/snow/actually_safe,
 /area/club_penguin/town)
 "V" = (
@@ -64,7 +82,7 @@ V
 V
 V
 e
-F
+e
 V
 V
 V
@@ -132,7 +150,7 @@ V
 V
 V
 V
-V
+F
 V
 V
 F
@@ -150,8 +168,8 @@ V
 V
 V
 V
-V
-e
+N
+F
 F
 F
 F
@@ -186,7 +204,7 @@ V
 V
 V
 V
-F
+E
 F
 F
 F
@@ -204,7 +222,7 @@ V
 V
 V
 V
-F
+E
 F
 F
 s
@@ -294,7 +312,7 @@ V
 V
 V
 V
-V
+K
 F
 F
 F
@@ -371,7 +389,7 @@ V
 V
 V
 g
-F
+g
 V
 V
 V

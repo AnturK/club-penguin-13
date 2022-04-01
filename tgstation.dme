@@ -4333,6 +4333,7 @@
 #include "modular_event\club_penguin\maps\code\gift_shop.dm"
 #include "modular_event\club_penguin\maps\code\iceberg.dm"
 #include "modular_event\club_penguin\maps\code\maps.dm"
+#include "modular_event\club_penguin\maps\code\night_club.dm"
 #include "modular_event\club_penguin\maps\code\pizza_parlor.dm"
 #include "modular_event\club_penguin\maps\code\plaza.dm"
 #include "modular_event\club_penguin\maps\code\ski_village.dm"
