@@ -4316,6 +4316,8 @@
 #include "modular_event\club_penguin\finale\code\finale_controller.dm"
 #include "modular_event\club_penguin\finale\code\iceberg_cracking.dm"
 #include "modular_event\club_penguin\finale\code\npcs.dm"
+#include "modular_event\club_penguin\force_config\force_config.dm"
+#include "modular_event\club_penguin\force_config\no_station_names.dm"
 #include "modular_event\club_penguin\hud\code\actions_hud.dm"
 #include "modular_event\club_penguin\hud\code\bottom_hud.dm"
 #include "modular_event\club_penguin\hud\code\hud.dm"
