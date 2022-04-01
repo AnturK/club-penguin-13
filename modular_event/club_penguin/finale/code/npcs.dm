@@ -45,7 +45,12 @@
 		"drill more",
 		"we'll tip it",
 		"tipping tipping",
+		"its tipping",
+		"looool",
+		"drill it",
+		"just keep drilling",
+		"its hard hat and dance",
 	)
 
-	if (prob(15) && phrases.len > 0)
+	if (prob(40) && phrases.len > 0)
 		addtimer(CALLBACK(src, /atom/movable/proc/say, pick_n_take(phrases), 30), rand(1 SECONDS, 5 SECONDS))
